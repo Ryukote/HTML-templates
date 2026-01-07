@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Elite Performance Tuning</title>
+    <meta name="description" content="Professional car tuning and performance enhancement services">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/[email protected]/dist/aos.css" rel="stylesheet">
+
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+
+    <!-- Lenis CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6b35',
+                        secondary: '#004e89',
+                        dark: '#0a0a0a',
+                        light: '#f8f9fa',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light dark:bg-dark text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-dark/90 backdrop-blur-md shadow-lg transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl" id="logo-text">EPT</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" id="brand-name">Elite Performance</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex items-center space-x-8" id="nav-menu">
+                    <li><a href="#home" class="nav-link hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="#services" class="nav-link hover:text-primary transition-colors">Services</a></li>
+                    <li><a href="#gallery" class="nav-link hover:text-primary transition-colors">Gallery</a></li>
+                    <li><a href="#testimonials" class="nav-link hover:text-primary transition-colors">Testimonials</a></li>
+                    <li><a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+
+                <!-- Theme Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="flex flex-col space-y-4">
+                    <li><a href="#home" class="block nav-link hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="#services" class="block nav-link hover:text-primary transition-colors">Services</a></li>
+                    <li><a href="#gallery" class="block nav-link hover:text-primary transition-colors">Gallery</a></li>
+                    <li><a href="#testimonials" class="block nav-link hover:text-primary transition-colors">Testimonials</a></li>
+                    <li><a href="#contact" class="block nav-link hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Diagonal Split Hero Section -->
+    <section id="home" class="min-h-screen relative overflow-hidden">
+        <!-- Diagonal Split Images Container -->
+        <div class="diagonal-split-container">
+            <div class="diagonal-image-left">
+                <img id="diagonal-left-img" src="images/diagonal/car-1-left.jpg" alt="Performance Car Left" class="diagonal-img">
+            </div>
+            <div class="diagonal-image-right">
+                <img id="diagonal-right-img" src="images/diagonal/car-1-right.jpg" alt="Performance Car Right" class="diagonal-img">
+            </div>
+            <div class="diagonal-overlay"></div>
+        </div>
+
+        <!-- Hero Content Overlay -->
+        <div class="hero-content-overlay">
+            <div class="container mx-auto px-6 relative z-20">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div data-aos="fade-up" data-aos-duration="1000">
+                        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight text-white drop-shadow-2xl" id="hero-title">
+                            Unleash Your Car's True Potential
+                        </h1>
+                        <p class="text-xl md:text-2xl mb-8 text-white drop-shadow-lg" id="hero-subtitle">
+                            Professional ECU tuning and performance upgrades for the ultimate driving experience
+                        </p>
+                        <div class="flex flex-wrap gap-4 justify-center">
+                            <a href="#contact" class="btn-primary px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300" id="hero-cta-primary">
+                                Get Started
+                            </a>
+                            <a href="#services" class="btn-secondary px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-secondary transition-all duration-300" id="hero-cta-secondary">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Lottie Animation -->
+                    <div class="mt-12" data-aos="fade-up" data-aos-delay="300">
+                        <dotlottie-player
+                            src="https://lottie.host/960c9da5-cadc-4a97-993e-2f4321bffb57/aowBzkxVWs.json"
+                            background="transparent"
+                            speed="1"
+                            style="width: 150px; height: 150px; margin: 0 auto;"
+                            loop
+                            autoplay>
+                        </dotlottie-player>
+                    </div>
+
+                    <!-- Scroll Indicator -->
+                    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce" data-aos="fade-up" data-aos-delay="500">
+                        <a href="#services" class="text-white">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4" id="services-title">Our Services</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400" id="services-subtitle">Premium tuning solutions tailored to your needs</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up">
+                    <div class="service-icon text-5xl mb-6">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4">ECU Remapping</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Unlock hidden power and improve fuel efficiency with our advanced ECU remapping services.</p>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Power increase up to 30%
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Improved throttle response
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Better fuel economy
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Custom mapping available
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon text-5xl mb-6">⚡</div>
+                    <h3 class="text-2xl font-bold mb-4">Performance Upgrades</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Complete performance packages including turbo upgrades, exhaust systems, and intake modifications.</p>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Turbo/Supercharger installation
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Custom exhaust systems
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Cold air intakes
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Intercooler upgrades
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon text-5xl mb-6">🔧</div>
+                    <h3 class="text-2xl font-bold mb-4">Diagnostics & Maintenance</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Professional diagnostic services and preventive maintenance to keep your vehicle at peak performance.</p>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Advanced fault diagnostics
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Performance testing
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Regular maintenance
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Pre-tune inspections
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-gradient-to-r from-secondary to-primary text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="zoom-in">
+                    <div class="stat-number">2500+</div>
+                    <p class="text-xl mt-2 opacity-90">Cars Tuned</p>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-number">15+</div>
+                    <p class="text-xl mt-2 opacity-90">Years Experience</p>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number">98+</div>
+                    <p class="text-xl mt-2 opacity-90">Customer Satisfaction</p>
+                </div>
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-number">50+</div>
+                    <p class="text-xl mt-2 opacity-90">Expert Technicians</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4" id="gallery-title">Our Work</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400" id="gallery-subtitle">Excellence in every detail</p>
+            </div>
+
+            <div class="splide" id="gallery-carousel">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="relative group">
+                                <img src="images/gallery/bmw-m4-tuned.jpg" alt="BMW M4 Competition with Stage 2 ECU tune" class="w-full h-96 object-cover rounded-2xl gallery-image">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
+                                    <div class="p-6 text-white">
+                                        <p class="text-sm font-semibold uppercase tracking-wider text-primary">BMW</p>
+                                        <p class="text-lg">BMW M4 Competition with Stage 2 ECU tune</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="relative group">
+                                <img src="images/gallery/audi-rs6-performance.jpg" alt="Audi RS6 Avant with turbo upgrade" class="w-full h-96 object-cover rounded-2xl gallery-image">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
+                                    <div class="p-6 text-white">
+                                        <p class="text-sm font-semibold uppercase tracking-wider text-primary">Audi</p>
+                                        <p class="text-lg">Audi RS6 Avant with turbo upgrade</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="relative group">
+                                <img src="images/gallery/mercedes-c63-amg.jpg" alt="Mercedes C63 AMG dyno session" class="w-full h-96 object-cover rounded-2xl gallery-image">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
+                                    <div class="p-6 text-white">
+                                        <p class="text-sm font-semibold uppercase tracking-wider text-primary">Mercedes</p>
+                                        <p class="text-lg">Mercedes C63 AMG dyno session</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="relative group">
+                                <img src="images/gallery/porsche-911-turbo.jpg" alt="Porsche 911 Turbo S custom exhaust" class="w-full h-96 object-cover rounded-2xl gallery-image">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
+                                    <div class="p-6 text-white">
+                                        <p class="text-sm font-semibold uppercase tracking-wider text-primary">Porsche</p>
+                                        <p class="text-lg">Porsche 911 Turbo S custom exhaust</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="relative group">
+                                <img src="images/gallery/ford-mustang-gt.jpg" alt="Ford Mustang GT supercharger install" class="w-full h-96 object-cover rounded-2xl gallery-image">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
+                                    <div class="p-6 text-white">
+                                        <p class="text-sm font-semibold uppercase tracking-wider text-primary">Ford</p>
+                                        <p class="text-lg">Ford Mustang GT supercharger install</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="relative group">
+                                <img src="images/gallery/nissan-gtr-r35.jpg" alt="Nissan GT-R R35 Stage 3 build" class="w-full h-96 object-cover rounded-2xl gallery-image">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
+                                    <div class="p-6 text-white">
+                                        <p class="text-sm font-semibold uppercase tracking-wider text-primary">Nissan</p>
+                                        <p class="text-lg">Nissan GT-R R35 Stage 3 build</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="relative group">
+                                <img src="images/gallery/lamborghini-huracan.jpg" alt="Lamborghini Huracan performance tune" class="w-full h-96 object-cover rounded-2xl gallery-image">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
+                                    <div class="p-6 text-white">
+                                        <p class="text-sm font-semibold uppercase tracking-wider text-primary">Lamborghini</p>
+                                        <p class="text-lg">Lamborghini Huracan performance tune</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="relative group">
+                                <img src="images/gallery/tesla-model-s.jpg" alt="Tesla Model S Plaid optimization" class="w-full h-96 object-cover rounded-2xl gallery-image">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
+                                    <div class="p-6 text-white">
+                                        <p class="text-sm font-semibold uppercase tracking-wider text-primary">Tesla</p>
+                                        <p class="text-lg">Tesla Model S Plaid optimization</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="relative group">
+                                <img src="images/gallery/mclaren-720s.jpg" alt="McLaren 720S ECU remap" class="w-full h-96 object-cover rounded-2xl gallery-image">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
+                                    <div class="p-6 text-white">
+                                        <p class="text-sm font-semibold uppercase tracking-wider text-primary">McLaren</p>
+                                        <p class="text-lg">McLaren 720S ECU remap</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4" id="testimonials-title">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400" id="testimonials-subtitle">Trusted by car enthusiasts worldwide</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8" id="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <img src="images/avatars/client-1.jpg" alt="Michael Chen" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">Michael Chen</h4>
+                            <p class="text-gray-600 dark:text-gray-400">BMW M4 Competition</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 italic">"The difference is night and day! My M4 feels like a completely different car. The power delivery is smooth, and the increased performance is incredible. Best investment I've made!"</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <img src="images/avatars/client-2.jpg" alt="Sarah Johnson" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">Sarah Johnson</h4>
+                            <p class="text-gray-600 dark:text-gray-400">Audi RS3</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 italic">"Professional service from start to finish. The team really knows their stuff. My RS3 now has an extra 80hp and the throttle response is instantaneous. Couldn't be happier!"</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <img src="images/avatars/client-3.jpg" alt="David Martinez" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">David Martinez</h4>
+                            <p class="text-gray-600 dark:text-gray-400">Mercedes C63 AMG</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 italic">"Elite Performance delivered exactly what they promised. The custom tune on my C63 is perfect for both daily driving and track days. Exceptional quality and customer service!"</p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <img src="images/avatars/client-4.jpg" alt="Emma Wilson" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">Emma Wilson</h4>
+                            <p class="text-gray-600 dark:text-gray-400">Volkswagen Golf R</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 italic">"I was skeptical at first, but the results speak for themselves. Not only did I gain power, but my fuel economy actually improved! The team explained everything clearly and made me feel confident in my decision."</p>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <img src="images/avatars/client-5.jpg" alt="James Thompson" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">James Thompson</h4>
+                            <p class="text-gray-600 dark:text-gray-400">Porsche 718 Cayman</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 italic">"Outstanding work! They took the time to understand exactly what I wanted from my Cayman and delivered a tune that exceeded my expectations. The car is now perfect for spirited weekend drives."</p>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <img src="images/avatars/client-6.jpg" alt="Alex Rodriguez" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-lg">Alex Rodriguez</h4>
+                            <p class="text-gray-600 dark:text-gray-400">Ford Focus ST</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 italic">"Great value for money! The Stage 2 tune transformed my Focus ST. It's now faster than some cars costing twice as much. The guys at Elite Performance really know their craft!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4" id="contact-title">Get In Touch</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-400" id="contact-subtitle">Ready to transform your vehicle?</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div data-aos="fade-right">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" id="form-label-name">Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-primary" id="form-input-name" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" id="form-label-email">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-primary" id="form-input-email" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" id="form-label-phone">Phone</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-primary" id="form-input-phone">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2" id="form-label-message">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 focus:outline-none focus:border-primary" id="form-input-message" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300" id="form-submit-btn">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div data-aos="fade-left">
+                    <div class="space-y-6">
+                        <div class="tilt-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-2" id="contact-info-title-location">Location</h3>
+                            <p class="text-gray-600 dark:text-gray-400" id="contact-info-address">123 Performance Drive, Tuning City, TC 12345</p>
+                        </div>
+                        <div class="tilt-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-2" id="contact-info-title-phone">Phone</h3>
+                            <p class="text-gray-600 dark:text-gray-400" id="contact-info-phone">+1 (555) 123-4567</p>
+                        </div>
+                        <div class="tilt-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-2" id="contact-info-title-email">Email</h3>
+                            <p class="text-gray-600 dark:text-gray-400" id="contact-info-email">[email protected]</p>
+                        </div>
+                        <div class="tilt-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-2" id="contact-info-title-hours">Hours</h3>
+                            <p class="text-gray-600 dark:text-gray-400" id="contact-info-hours">Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4" id="footer-about-title">About Us</h3>
+                    <p class="text-gray-400" id="footer-about-text">Elite Performance Tuning - Your trusted partner for professional automotive performance enhancement.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4" id="footer-services-title">Services</h3>
+                    <ul class="space-y-2 text-gray-400" id="footer-services-list">
+                        <li>ECU Tuning</li>
+                        <li>Performance Upgrades</li>
+                        <li>Diagnostics</li>
+                        <li>Custom Solutions</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4" id="footer-links-title">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="#gallery" class="hover:text-primary transition-colors">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4" id="footer-social-title">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p id="footer-copyright">&copy; 2024 Elite Performance Tuning. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Lottie Web Player -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+    <!-- Vanilla Tilt -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1/dist/vanilla-tilt.min.js"></script>
+
+    <!-- Splide -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/[email protected]/dist/aos.js"></script>
+
+    <!-- Lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

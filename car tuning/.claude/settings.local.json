@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:micku7zu.github.io)",
+      "WebFetch(domain:splidejs.com)",
+      "WebFetch(domain:lenis.darkroom.engineering)",
+      "WebFetch(domain:michalsnik.github.io)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:lottiefiles.com)",
+      "Bash(node download-images.js:*)",
+      "Bash(python -m http.server:*)",
+      "Bash(npx http-server -p 8000 -o)",
+      "Bash(node download-real-car-images.js:*)",
+      "Bash(node download-missing-images.js:*)",
+      "Bash(curl:*)",
+      "Bash(./download-from-pexels.bat)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

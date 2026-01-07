@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "diagonal": [
+      {
+        "left": "images/diagonal/car-1-left.jpg",
+        "right": "images/diagonal/car-1-right.jpg",
+        "alt": "High-performance BMW M3 tuning"
+      },
+      {
+        "left": "images/diagonal/car-2-left.jpg",
+        "right": "images/diagonal/car-2-right.jpg",
+        "alt": "Custom Audi RS6 performance upgrade"
+      },
+      {
+        "left": "images/diagonal/car-3-left.jpg",
+        "right": "images/diagonal/car-3-right.jpg",
+        "alt": "Mercedes AMG GT tuning package"
+      },
+      {
+        "left": "images/diagonal/car-4-left.jpg",
+        "right": "images/diagonal/car-4-right.jpg",
+        "alt": "Porsche 911 Turbo custom build"
+      },
+      {
+        "left": "images/diagonal/car-5-left.jpg",
+        "right": "images/diagonal/car-5-right.jpg",
+        "alt": "Nissan GT-R performance tuning"
+      }
+    ]
+  },
+  "gallery": [
+    {
+      "url": "images/gallery/bmw-m4-tuned.jpg",
+      "alt": "BMW M4 Competition with Stage 2 ECU tune",
+      "category": "BMW"
+    },
+    {
+      "url": "images/gallery/audi-rs6-performance.jpg",
+      "alt": "Audi RS6 Avant with turbo upgrade",
+      "category": "Audi"
+    },
+    {
+      "url": "images/gallery/mercedes-c63-amg.jpg",
+      "alt": "Mercedes C63 AMG dyno session",
+      "category": "Mercedes"
+    },
+    {
+      "url": "images/gallery/porsche-911-turbo.jpg",
+      "alt": "Porsche 911 Turbo S custom exhaust",
+      "category": "Porsche"
+    },
+    {
+      "url": "images/gallery/ford-mustang-gt.jpg",
+      "alt": "Ford Mustang GT supercharger install",
+      "category": "Ford"
+    },
+    {
+      "url": "images/gallery/nissan-gtr-r35.jpg",
+      "alt": "Nissan GT-R R35 Stage 3 build",
+      "category": "Nissan"
+    },
+    {
+      "url": "images/gallery/lamborghini-huracan.jpg",
+      "alt": "Lamborghini Huracan performance tune",
+      "category": "Lamborghini"
+    },
+    {
+      "url": "images/gallery/tesla-model-s.jpg",
+      "alt": "Tesla Model S Plaid optimization",
+      "category": "Tesla"
+    },
+    {
+      "url": "images/gallery/mclaren-720s.jpg",
+      "alt": "McLaren 720S ECU remap",
+      "category": "McLaren"
+    }
+  ],
+  "testimonials": [
+    {
+      "avatar": "images/avatars/client-1.jpg",
+      "name": "Michael Chen",
+      "car": "BMW M4 Competition"
+    },
+    {
+      "avatar": "images/avatars/client-2.jpg",
+      "name": "Sarah Johnson",
+      "car": "Audi RS3"
+    },
+    {
+      "avatar": "images/avatars/client-3.jpg",
+      "name": "David Martinez",
+      "car": "Mercedes C63 AMG"
+    },
+    {
+      "avatar": "images/avatars/client-4.jpg",
+      "name": "Emma Wilson",
+      "car": "Volkswagen Golf R"
+    },
+    {
+      "avatar": "images/avatars/client-5.jpg",
+      "name": "James Thompson",
+      "car": "Porsche 718 Cayman"
+    },
+    {
+      "avatar": "images/avatars/client-6.jpg",
+      "name": "Alex Rodriguez",
+      "car": "Ford Focus ST"
+    }
+  ]
+}

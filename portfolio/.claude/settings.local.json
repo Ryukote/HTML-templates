@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:micku7zu.github.io)",
+      "WebFetch(domain:splidejs.com)",
+      "WebFetch(domain:lenis.darkroom.engineering)",
+      "WebFetch(domain:michalsnik.github.io)",
+      "WebFetch(domain:lottiefiles.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(dir:*)",
+      "Bash(test:*)",
+      "Bash(cat:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

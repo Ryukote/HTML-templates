@@ -1,0 +1,24 @@
+{
+  "name": "modern-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, smooth portfolio website with animations and dark mode",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "dev": "npx live-server --port=8000",
+    "deploy:netlify": "npx netlify-cli deploy --prod",
+    "deploy:vercel": "npx vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "tailwind",
+    "animations",
+    "vanilla-javascript",
+    "responsive",
+    "dark-mode"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

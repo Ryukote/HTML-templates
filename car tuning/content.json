@@ -1,0 +1,191 @@
+{
+  "site": {
+    "title": "Elite Performance Tuning - Professional Car Tuning Services",
+    "brandName": "Elite Performance",
+    "logoText": "EPT"
+  },
+  "navigation": [
+    { "text": "Home", "href": "#home" },
+    { "text": "Services", "href": "#services" },
+    { "text": "Gallery", "href": "#gallery" },
+    { "text": "Testimonials", "href": "#testimonials" },
+    { "text": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "title": "Unleash Your Car's True Potential",
+    "subtitle": "Professional ECU tuning and performance upgrades for the ultimate driving experience",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Learn More"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Premium tuning solutions tailored to your needs",
+    "items": [
+      {
+        "icon": "🚀",
+        "title": "ECU Remapping",
+        "description": "Unlock hidden power and improve fuel efficiency with our advanced ECU remapping services.",
+        "features": [
+          "Power increase up to 30%",
+          "Improved throttle response",
+          "Better fuel economy",
+          "Custom mapping available"
+        ]
+      },
+      {
+        "icon": "⚡",
+        "title": "Performance Upgrades",
+        "description": "Complete performance packages including turbo upgrades, exhaust systems, and intake modifications.",
+        "features": [
+          "Turbo/Supercharger installation",
+          "Custom exhaust systems",
+          "Cold air intakes",
+          "Intercooler upgrades"
+        ]
+      },
+      {
+        "icon": "🔧",
+        "title": "Diagnostics & Maintenance",
+        "description": "Professional diagnostic services and preventive maintenance to keep your vehicle at peak performance.",
+        "features": [
+          "Advanced fault diagnostics",
+          "Performance testing",
+          "Regular maintenance",
+          "Pre-tune inspections"
+        ]
+      },
+      {
+        "icon": "🎯",
+        "title": "Custom Solutions",
+        "description": "Bespoke tuning solutions designed specifically for your vehicle and driving style.",
+        "features": [
+          "Track-focused setups",
+          "Street performance",
+          "Drag racing optimization",
+          "Personalized calibration"
+        ]
+      },
+      {
+        "icon": "💻",
+        "title": "Dyno Tuning",
+        "description": "State-of-the-art dynamometer testing and tuning for precise power optimization.",
+        "features": [
+          "Rolling road testing",
+          "Power and torque graphs",
+          "Before/after comparisons",
+          "Live data monitoring"
+        ]
+      },
+      {
+        "icon": "🛡️",
+        "title": "Warranty Protection",
+        "description": "All our work is backed by comprehensive warranties for your peace of mind.",
+        "features": [
+          "12-month warranty",
+          "Insurance-approved work",
+          "Certified technicians",
+          "Quality guaranteed"
+        ]
+      }
+    ]
+  },
+  "stats": [
+    {
+      "number": 2500,
+      "label": "Cars Tuned"
+    },
+    {
+      "number": 15,
+      "label": "Years Experience"
+    },
+    {
+      "number": 98,
+      "label": "Customer Satisfaction"
+    },
+    {
+      "number": 50,
+      "label": "Expert Technicians"
+    }
+  ],
+  "gallery": {
+    "title": "Our Work",
+    "subtitle": "Excellence in every detail"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Trusted by car enthusiasts worldwide",
+    "items": [
+      {
+        "name": "Michael Chen",
+        "car": "BMW M4 Competition",
+        "rating": 5,
+        "avatar": "images/avatars/client-1.jpg",
+        "text": "The difference is night and day! My M4 feels like a completely different car. The power delivery is smooth, and the increased performance is incredible. Best investment I've made!"
+      },
+      {
+        "name": "Sarah Johnson",
+        "car": "Audi RS3",
+        "rating": 5,
+        "avatar": "images/avatars/client-2.jpg",
+        "text": "Professional service from start to finish. The team really knows their stuff. My RS3 now has an extra 80hp and the throttle response is instantaneous. Couldn't be happier!"
+      },
+      {
+        "name": "David Martinez",
+        "car": "Mercedes C63 AMG",
+        "rating": 5,
+        "avatar": "images/avatars/client-3.jpg",
+        "text": "Elite Performance delivered exactly what they promised. The custom tune on my C63 is perfect for both daily driving and track days. Exceptional quality and customer service!"
+      },
+      {
+        "name": "Emma Wilson",
+        "car": "Volkswagen Golf R",
+        "rating": 5,
+        "avatar": "images/avatars/client-4.jpg",
+        "text": "I was skeptical at first, but the results speak for themselves. Not only did I gain power, but my fuel economy actually improved! The team explained everything clearly and made me feel confident in my decision."
+      },
+      {
+        "name": "James Thompson",
+        "car": "Porsche 718 Cayman",
+        "rating": 5,
+        "avatar": "images/avatars/client-5.jpg",
+        "text": "Outstanding work! They took the time to understand exactly what I wanted from my Cayman and delivered a tune that exceeded my expectations. The car is now perfect for spirited weekend drives."
+      },
+      {
+        "name": "Alex Rodriguez",
+        "car": "Ford Focus ST",
+        "rating": 5,
+        "avatar": "images/avatars/client-6.jpg",
+        "text": "Great value for money! The Stage 2 tune transformed my Focus ST. It's now faster than some cars costing twice as much. The guys at Elite Performance really know their craft!"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to transform your vehicle?",
+    "form": {
+      "labelName": "Name",
+      "labelEmail": "Email",
+      "labelPhone": "Phone",
+      "labelMessage": "Message",
+      "submitButton": "Send Message"
+    },
+    "info": {
+      "locationTitle": "Location",
+      "address": "123 Performance Drive, Tuning City, TC 12345",
+      "phoneTitle": "Phone",
+      "phone": "+1 (555) 123-4567",
+      "emailTitle": "Email",
+      "email": "[email protected]",
+      "hoursTitle": "Hours",
+      "hours": "Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM"
+    }
+  },
+  "footer": {
+    "aboutTitle": "About Us",
+    "aboutText": "Elite Performance Tuning - Your trusted partner for professional automotive performance enhancement.",
+    "servicesTitle": "Services",
+    "linksTitle": "Quick Links",
+    "socialTitle": "Follow Us",
+    "copyright": "© 2024 Elite Performance Tuning. All rights reserved."
+  }
+}

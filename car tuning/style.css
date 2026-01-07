@@ -1,0 +1,358 @@
+/* Custom Styles for Elite Performance Tuning */
+
+:root {
+    --primary: #ff6b35;
+    --secondary: #004e89;
+    --dark: #0a0a0a;
+    --light: #f8f9fa;
+}
+
+/* Diagonal Split Hero Section */
+.diagonal-split-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.diagonal-image-left,
+.diagonal-image-right {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.diagonal-image-left {
+    clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%);
+    z-index: 2;
+}
+
+.diagonal-image-right {
+    clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+    z-index: 1;
+}
+
+.diagonal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 1.5s ease-in-out, transform 0.5s ease;
+}
+
+.diagonal-img.fade-out {
+    opacity: 0;
+}
+
+.diagonal-img.fade-in {
+    opacity: 1;
+}
+
+.diagonal-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,78,137,0.6) 0%, rgba(255,107,53,0.5) 100%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.hero-content-overlay {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+/* Responsive Diagonal Split */
+@media (max-width: 768px) {
+    .diagonal-image-left {
+        clip-path: polygon(0 0, 100% 0, 100% 45%, 0% 55%);
+    }
+
+    .diagonal-image-right {
+        clip-path: polygon(0 45%, 100% 55%, 100% 100%, 0% 100%);
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light);
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--secondary), var(--primary));
+}
+
+/* Navigation Scroll Effect */
+.nav-scrolled {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Tilt Cards */
+.tilt-card {
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+}
+
+/* Button Animations */
+.btn-primary,
+.btn-secondary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before,
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before {
+    left: 100%;
+}
+
+/* Service Card Hover Effects */
+.service-card {
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.dark .service-card {
+    background: #1a1a1a;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+}
+
+.service-card .service-icon {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Stats Counter Animation */
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Gallery Image Effects */
+.gallery-image {
+    transition: all 0.3s ease;
+    filter: brightness(0.9);
+}
+
+.gallery-image:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.dark .testimonial-card {
+    background: #1a1a1a;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 78, 137, 0.15);
+}
+
+/* Form Focus Effects */
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+    border-color: var(--primary);
+}
+
+/* Splide Customization */
+.splide__arrow {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.splide__arrow:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.splide__pagination__page.is-active {
+    background: var(--primary);
+}
+
+/* Loading Animation */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Parallax Effect */
+.parallax {
+    transition: transform 0.3s ease-out;
+}
+
+/* Contact Info Cards Glow Effect */
+.contact-card {
+    position: relative;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.contact-card:hover::before {
+    opacity: 0.3;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+/* Animation Delays for Stagger Effect */
+[data-aos] {
+    pointer-events: auto;
+}
+
+/* Smooth Transitions */
+* {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+/* Performance Optimization */
+.tilt-card,
+.service-card,
+.testimonial-card {
+    will-change: transform;
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+/* Accessibility */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Focus Visible for Keyboard Navigation */
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
