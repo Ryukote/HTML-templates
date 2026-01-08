@@ -1,4 +1,6 @@
-// Elite Performance Tuning - Main JavaScript
+// PowerTune - Main JavaScript
+// Author: Antonio Halužan
+// Copyright © 2024 Antonio Halužan. All rights reserved.
 
 // ==================== CONFIGURATION ====================
 // Hardcoded diagonal split image pairs
@@ -6,27 +8,27 @@ const diagonalImages = [
     {
         left: "images/diagonal/car-1-left.jpg",
         right: "images/diagonal/car-1-right.jpg",
-        alt: "High-performance BMW M3 tuning"
+        alt: "Elite Performance Tuning and McLaren 720S"
     },
     {
         left: "images/diagonal/car-2-left.jpg",
         right: "images/diagonal/car-2-right.jpg",
-        alt: "Custom Audi RS6 performance upgrade"
+        alt: "BMW M4 and Ford Mustang GT performance builds"
     },
     {
         left: "images/diagonal/car-3-left.jpg",
         right: "images/diagonal/car-3-right.jpg",
-        alt: "Mercedes AMG GT tuning package"
+        alt: "Audi RS6 Avant and Nissan GT-R R35 tuning"
     },
     {
         left: "images/diagonal/car-4-left.jpg",
         right: "images/diagonal/car-4-right.jpg",
-        alt: "Porsche 911 Turbo custom build"
+        alt: "Mercedes C63 AMG and Lamborghini Huracan upgrades"
     },
     {
         left: "images/diagonal/car-5-left.jpg",
         right: "images/diagonal/car-5-right.jpg",
-        alt: "Nissan GT-R performance tuning"
+        alt: "Porsche 911 Turbo S and Tesla Model S Plaid optimization"
     }
 ];
 
@@ -92,7 +94,7 @@ function initDiagonalSplit() {
 function startDiagonalRotation() {
     setInterval(() => {
         rotateDiagonalImages();
-    }, 6000); // Change images every 6 seconds
+    }, 8000); // Change images every 8 seconds
 }
 
 function rotateDiagonalImages() {
@@ -130,7 +132,7 @@ function rotateDiagonalImages() {
             leftImg.classList.add('active');
             rightImg.classList.add('active');
         }, 50);
-    }, 1500); // Wait for slide out to complete
+    }, 1300); // Wait for slide out to complete (matches 1.2s CSS transition)
 }
 
 // ==================== VANILLA TILT INITIALIZATION ====================
@@ -188,16 +190,20 @@ function initSplide() {
 // ==================== AOS INITIALIZATION ====================
 function initAOS() {
     if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-out-cubic',
-            once: true,
-            offset: 100,
-            delay: 0
-        });
-        console.log('AOS initialized successfully');
+        try {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 100,
+                delay: 0
+            });
+            console.log('AOS initialized successfully');
+        } catch (error) {
+            console.warn('AOS initialization failed:', error);
+        }
     } else {
-        console.error('AOS library not loaded');
+        console.warn('AOS library not loaded - animations will be skipped');
     }
 }
 
@@ -312,6 +318,18 @@ if ('IntersectionObserver' in window) {
 // Refresh AOS after all content is loaded
 window.addEventListener('load', () => {
     if (typeof AOS !== 'undefined') {
-        AOS.refresh();
+        // Try to initialize if it wasn't initialized before
+        if (!AOS.initialized) {
+            initAOS();
+        } else {
+            AOS.refresh();
+        }
+    } else {
+        // Retry initialization on window load
+        setTimeout(() => {
+            if (typeof AOS !== 'undefined') {
+                initAOS();
+            }
+        }, 100);
     }
 });
