@@ -101,11 +101,13 @@ function rotateDiagonalImages() {
 
     if (!leftImg || !rightImg) return;
 
-    // Fade out current images
-    leftImg.classList.add('fade-out');
-    rightImg.classList.add('fade-out');
+    // Slide out current images
+    leftImg.classList.remove('active', 'slide-in');
+    rightImg.classList.remove('active', 'slide-in');
+    leftImg.classList.add('slide-out');
+    rightImg.classList.add('slide-out');
 
-    // After fade out, change images
+    // After slide out, change images
     setTimeout(() => {
         currentDiagonalIndex = (currentDiagonalIndex + 1) % diagonalImages.length;
         const newImages = diagonalImages[currentDiagonalIndex];
@@ -115,18 +117,20 @@ function rotateDiagonalImages() {
         leftImg.alt = newImages.alt + ' Left';
         rightImg.alt = newImages.alt + ' Right';
 
-        // Fade in new images
-        leftImg.classList.remove('fade-out');
-        rightImg.classList.remove('fade-out');
-        leftImg.classList.add('fade-in');
-        rightImg.classList.add('fade-in');
+        // Reset to slide-in position
+        leftImg.classList.remove('slide-out');
+        rightImg.classList.remove('slide-out');
+        leftImg.classList.add('slide-in');
+        rightImg.classList.add('slide-in');
 
-        // Remove fade-in class after transition
+        // Slide in new images
         setTimeout(() => {
-            leftImg.classList.remove('fade-in');
-            rightImg.classList.remove('fade-in');
-        }, 1500);
-    }, 1500); // Wait for fade out to complete
+            leftImg.classList.remove('slide-in');
+            rightImg.classList.remove('slide-in');
+            leftImg.classList.add('active');
+            rightImg.classList.add('active');
+        }, 50);
+    }, 1500); // Wait for slide out to complete
 }
 
 // ==================== VANILLA TILT INITIALIZATION ====================
@@ -233,25 +237,18 @@ function initLenis() {
     });
 }
 
-// ==================== CONTACT FORM HANDLING ====================
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+// ==================== SOCIAL CONTACT TRACKING ====================
+// Track social media contact clicks (optional analytics)
+document.addEventListener('DOMContentLoaded', function() {
+    const socialCards = document.querySelectorAll('.social-contact-card');
 
-    // Get form values
-    const name = document.getElementById('form-input-name').value;
-    const email = document.getElementById('form-input-email').value;
-    const phone = document.getElementById('form-input-phone').value;
-    const message = document.getElementById('form-input-message').value;
-
-    // Here you would typically send the form data to a server
-    console.log('Form submitted:', { name, email, phone, message });
-
-    // Show success message
-    alert('Thank you for your message! We will get back to you soon.');
-
-    // Reset form
-    contactForm.reset();
+    socialCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const platform = this.querySelector('h3').textContent;
+            console.log(`User clicked on ${platform} contact option`);
+            // You can add analytics tracking here if needed
+        });
+    });
 });
 
 // ==================== NAVIGATION SCROLL EFFECT ====================

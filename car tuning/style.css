@@ -38,14 +38,38 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: opacity 1.5s ease-in-out, transform 0.5s ease;
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
 
-.diagonal-img.fade-out {
+/* Left image slides upward along diagonal */
+.diagonal-image-left .diagonal-img.slide-out {
+    transform: translate(-20%, -100%);
     opacity: 0;
 }
 
-.diagonal-img.fade-in {
+.diagonal-image-left .diagonal-img.slide-in {
+    transform: translate(20%, 100%);
+    opacity: 0;
+}
+
+.diagonal-image-left .diagonal-img.active {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+/* Right image slides downward along diagonal */
+.diagonal-image-right .diagonal-img.slide-out {
+    transform: translate(20%, 100%);
+    opacity: 0;
+}
+
+.diagonal-image-right .diagonal-img.slide-in {
+    transform: translate(-20%, -100%);
+    opacity: 0;
+}
+
+.diagonal-image-right .diagonal-img.active {
+    transform: translate(0, 0);
     opacity: 1;
 }
 
@@ -197,6 +221,37 @@ html {
 .testimonial-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 78, 137, 0.15);
+}
+
+/* Social Contact Cards */
+.social-contact-card {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.social-contact-card:hover::before {
+    left: 100%;
+}
+
+.social-contact-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+.social-contact-card:active {
+    transform: translateY(-4px) scale(1.01);
 }
 
 /* Form Focus Effects */
