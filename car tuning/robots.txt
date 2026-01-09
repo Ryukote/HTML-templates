@@ -1,0 +1,12 @@
+# robots.txt for PowerTune
+
+User-agent: *
+Allow: /
+Disallow: /app.js
+Disallow: /style.css
+
+# Sitemap location
+Sitemap: https://www.powertune.com/sitemap.xml
+
+# Crawl delay (optional, adjust as needed)
+Crawl-delay: 1

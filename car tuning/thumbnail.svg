@@ -1,0 +1,21 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+    <!-- PowerTune Website Icon - 80x80px -->
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#004e89;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <!-- Rounded Square Background (matches website logo) -->
+    <rect width="80" height="80" rx="16" fill="url(#gradient)"/>
+
+    <!-- PT Text (matches website branding) -->
+    <text x="40" y="52"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="32"
+          font-weight="bold"
+          fill="#ffffff"
+          text-anchor="middle"
+          dominant-baseline="middle">PT</text>
+</svg>

@@ -1,16 +1,61 @@
 <!DOCTYPE html>
+<!--
+    PowerTune - Professional Car Performance Tuning Template
+    Author: Antonio Halužan
+    Copyright © 2024 Antonio Halužan. All rights reserved.
+    Website: https://antoniohaluzan.com
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Elite Performance Tuning</title>
-    <meta name="description" content="Professional car tuning and performance enhancement services">
+    <title id="page-title">PowerTune - Professional ECU Remapping & Car Performance Upgrades</title>
+    <meta name="description" content="Expert car tuning services including ECU remapping, performance upgrades, and diagnostics. Increase power up to 30%, improve fuel efficiency. 2500+ cars tuned, 15+ years experience.">
+    <meta name="keywords" content="car tuning, ECU remapping, performance tuning, car performance upgrades, turbo upgrades, engine tuning, dyno tuning, automotive performance">
+    <meta name="author" content="Antonio Halužan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.powertune.com/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="thumbnail.png">
+    <link rel="apple-touch-icon" href="thumbnail.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.powertune.com/">
+    <meta property="og:title" content="PowerTune - Professional Car Performance Enhancement">
+    <meta property="og:description" content="Professional ECU remapping and performance upgrades. Unlock hidden power, improve fuel efficiency. 2500+ cars tuned with 98% customer satisfaction.">
+    <meta property="og:image" content="https://www.powertune.com/images/gallery/bmw-m4-tuned.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="PowerTune">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.powertune.com/">
+    <meta name="twitter:title" content="PowerTune - Professional Car Performance Enhancement">
+    <meta name="twitter:description" content="Professional ECU remapping and performance upgrades. Unlock hidden power, improve fuel efficiency.">
+    <meta name="twitter:image" content="https://www.powertune.com/images/gallery/bmw-m4-tuned.jpg">
+    <meta name="twitter:site" content="@powertune">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#ff6b35">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="PowerTune">
+
+    <!-- Geographic Meta Tags -->
+    <meta name="geo.region" content="US-TC">
+    <meta name="geo.placename" content="Tuning City">
+    <meta name="geo.position" content="40.7128;-74.0060">
+    <meta name="ICBM" content="40.7128, -74.0060">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- AOS (Animate On Scroll) CSS -->
-    <link href="https://unpkg.com/[email protected]/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Splide CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
@@ -37,23 +82,159 @@
             }
         }
     </script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutomotiveBusiness",
+        "name": "PowerTune",
+        "image": "https://www.powertune.com/images/gallery/bmw-m4-tuned.jpg",
+        "@id": "https://www.powertune.com",
+        "url": "https://www.powertune.com",
+        "telephone": "+15551234567",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Performance Drive",
+            "addressLocality": "Tuning City",
+            "addressRegion": "TC",
+            "postalCode": "12345",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.7128,
+            "longitude": -74.0060
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "16:00"
+            }
+        ],
+        "sameAs": [
+            "https://instagram.com/powertune",
+            "https://twitter.com/powertune",
+            "https://t.me/powertune",
+            "https://discord.gg/powertune"
+        ],
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "2500",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "description": "Professional car tuning and performance enhancement services including ECU remapping, performance upgrades, turbo installations, and diagnostics. Over 15 years of experience with 2500+ cars tuned."
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Car Tuning Services",
+        "provider": {
+            "@type": "AutomotiveBusiness",
+            "name": "PowerTune"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "United States"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Performance Tuning Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "ECU Remapping",
+                        "description": "Advanced ECU remapping to unlock hidden power and improve fuel efficiency with power increases up to 30%"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Performance Upgrades",
+                        "description": "Complete performance packages including turbo upgrades, exhaust systems, and intake modifications"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Diagnostics & Maintenance",
+                        "description": "Professional diagnostic services and preventive maintenance to keep your vehicle at peak performance"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.powertune.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://www.powertune.com/#services"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Gallery",
+                "item": "https://www.powertune.com/#gallery"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Contact",
+                "item": "https://www.powertune.com/#contact"
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-light dark:bg-dark text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-dark/90 backdrop-blur-md shadow-lg transition-all duration-300">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-dark/90 backdrop-blur-md shadow-lg transition-all duration-300" role="navigation" aria-label="Main navigation">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-xl" id="logo-text">EPT</span>
-                    </div>
-                    <span class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" id="brand-name">Elite Performance</span>
+                    <a href="#home" aria-label="PowerTune Home" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl" id="logo-text">PT</span>
+                        </div>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" id="brand-name">PowerTune</span>
+                    </a>
                 </div>
 
                 <!-- Desktop Menu -->
-                <ul class="hidden md:flex items-center space-x-8" id="nav-menu">
+                <ul class="hidden md:flex items-center space-x-8" id="nav-menu" role="menubar">
                     <li><a href="#home" class="nav-link hover:text-primary transition-colors">Home</a></li>
                     <li><a href="#services" class="nav-link hover:text-primary transition-colors">Services</a></li>
                     <li><a href="#gallery" class="nav-link hover:text-primary transition-colors">Gallery</a></li>
@@ -63,17 +244,17 @@
 
                 <!-- Theme Toggle & Mobile Menu -->
                 <div class="flex items-center space-x-4">
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors">
-                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle dark mode">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                         </svg>
-                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                             <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                         </svg>
                     </button>
 
-                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-800">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-800" aria-label="Toggle mobile menu" aria-expanded="false">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
@@ -93,8 +274,9 @@
         </div>
     </nav>
 
+    <main id="main-content" role="main">
     <!-- Diagonal Split Hero Section -->
-    <section id="home" class="min-h-screen relative overflow-hidden">
+    <section id="home" class="min-h-screen relative overflow-hidden" aria-label="Hero section">
         <!-- Diagonal Split Images Container -->
         <div class="diagonal-split-container">
             <div class="diagonal-image-left">
@@ -153,7 +335,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="services" class="py-20 bg-gray-50 dark:bg-gray-900" aria-labelledby="services-title">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4" id="services-title">Our Services</h2>
@@ -162,10 +344,10 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Service Card 1 -->
-                <div class="service-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up">
-                    <div class="service-icon text-5xl mb-6">🚀</div>
-                    <h3 class="text-2xl font-bold mb-4">ECU Remapping</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">Unlock hidden power and improve fuel efficiency with our advanced ECU remapping services.</p>
+                <article class="service-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" itemscope itemtype="https://schema.org/Service">
+                    <div class="service-icon text-5xl mb-6" aria-hidden="true">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4" itemprop="name">ECU Remapping</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6" itemprop="description">Unlock hidden power and improve fuel efficiency with our advanced ECU remapping services.</p>
                     <ul class="space-y-2 text-gray-600 dark:text-gray-400">
                         <li class="flex items-center">
                             <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -192,13 +374,13 @@
                             Custom mapping available
                         </li>
                     </ul>
-                </div>
+                </article>
 
                 <!-- Service Card 2 -->
-                <div class="service-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon text-5xl mb-6">⚡</div>
-                    <h3 class="text-2xl font-bold mb-4">Performance Upgrades</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">Complete performance packages including turbo upgrades, exhaust systems, and intake modifications.</p>
+                <article class="service-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" data-aos-delay="100" itemscope itemtype="https://schema.org/Service">
+                    <div class="service-icon text-5xl mb-6" aria-hidden="true">⚡</div>
+                    <h3 class="text-2xl font-bold mb-4" itemprop="name">Performance Upgrades</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6" itemprop="description">Complete performance packages including turbo upgrades, exhaust systems, and intake modifications.</p>
                     <ul class="space-y-2 text-gray-600 dark:text-gray-400">
                         <li class="flex items-center">
                             <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -225,13 +407,13 @@
                             Intercooler upgrades
                         </li>
                     </ul>
-                </div>
+                </article>
 
                 <!-- Service Card 3 -->
-                <div class="service-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon text-5xl mb-6">🔧</div>
-                    <h3 class="text-2xl font-bold mb-4">Diagnostics & Maintenance</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">Professional diagnostic services and preventive maintenance to keep your vehicle at peak performance.</p>
+                <article class="service-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" data-aos-delay="200" itemscope itemtype="https://schema.org/Service">
+                    <div class="service-icon text-5xl mb-6" aria-hidden="true">🔧</div>
+                    <h3 class="text-2xl font-bold mb-4" itemprop="name">Diagnostics & Maintenance</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6" itemprop="description">Professional diagnostic services and preventive maintenance to keep your vehicle at peak performance.</p>
                     <ul class="space-y-2 text-gray-600 dark:text-gray-400">
                         <li class="flex items-center">
                             <svg class="w-5 h-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -258,7 +440,7 @@
                             Pre-tune inspections
                         </li>
                     </ul>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -288,7 +470,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20">
+    <section id="gallery" class="py-20" aria-labelledby="gallery-title">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4" id="gallery-title">Our Work</h2>
@@ -404,7 +586,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="testimonials" class="py-20 bg-gray-50 dark:bg-gray-900" aria-labelledby="testimonials-title">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4" id="testimonials-title">What Our Clients Say</h2>
@@ -413,19 +595,21 @@
 
             <div class="grid md:grid-cols-3 gap-8" id="testimonials-grid">
                 <!-- Testimonial 1 -->
-                <div class="testimonial-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up">
-                    <div class="flex items-center mb-4">
-                        <img src="images/avatars/client-1.jpg" alt="Michael Chen" class="w-16 h-16 rounded-full mr-4 object-cover">
+                <article class="testimonial-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" itemscope itemtype="https://schema.org/Review">
+                    <div class="flex items-center mb-4" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <img src="images/avatars/client-1.jpg" alt="Michael Chen profile picture" class="w-16 h-16 rounded-full mr-4 object-cover" itemprop="image">
                         <div>
-                            <h4 class="font-bold text-lg">Michael Chen</h4>
+                            <h4 class="font-bold text-lg" itemprop="name">Michael Chen</h4>
                             <p class="text-gray-600 dark:text-gray-400">BMW M4 Competition</p>
                         </div>
                     </div>
-                    <div class="flex mb-4">
+                    <div class="flex mb-4" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                        <meta itemprop="ratingValue" content="5">
+                        <meta itemprop="bestRating" content="5">
                         ⭐⭐⭐⭐⭐
                     </div>
-                    <p class="text-gray-600 dark:text-gray-400 italic">"The difference is night and day! My M4 feels like a completely different car. The power delivery is smooth, and the increased performance is incredible. Best investment I've made!"</p>
-                </div>
+                    <p class="text-gray-600 dark:text-gray-400 italic" itemprop="reviewBody">"The difference is night and day! My M4 feels like a completely different car. The power delivery is smooth, and the increased performance is incredible. Best investment I've made!"</p>
+                </article>
 
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card p-8 rounded-2xl shadow-lg tilt-card" data-aos="fade-up" data-aos-delay="100">
@@ -506,7 +690,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
+    <section id="contact" class="py-20" aria-labelledby="contact-title">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4" id="contact-title">Get In Touch</h2>
@@ -531,7 +715,7 @@
                     </a>
 
                     <!-- Instagram -->
-                    <a href="https://instagram.com/eliteperformance" target="_blank" class="social-contact-card tilt-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <a href="https://instagram.com/powertune" target="_blank" class="social-contact-card tilt-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                         <div class="flex flex-col items-center text-center">
                             <div class="w-16 h-16 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-full flex items-center justify-center mb-4">
                                 <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -540,12 +724,12 @@
                             </div>
                             <h3 class="text-xl font-bold mb-2">Instagram</h3>
                             <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">Follow our latest builds</p>
-                            <span class="text-primary font-semibold">@eliteperformance</span>
+                            <span class="text-primary font-semibold">@powertune</span>
                         </div>
                     </a>
 
                     <!-- Facebook Messenger -->
-                    <a href="https://m.me/eliteperformancetuning" target="_blank" class="social-contact-card tilt-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <a href="https://m.me/powertune" target="_blank" class="social-contact-card tilt-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                         <div class="flex flex-col items-center text-center">
                             <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mb-4">
                                 <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -559,7 +743,7 @@
                     </a>
 
                     <!-- Telegram -->
-                    <a href="https://t.me/eliteperformance" target="_blank" class="social-contact-card tilt-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <a href="https://t.me/powertune" target="_blank" class="social-contact-card tilt-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                         <div class="flex flex-col items-center text-center">
                             <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mb-4">
                                 <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -573,7 +757,7 @@
                     </a>
 
                     <!-- Discord -->
-                    <a href="https://discord.gg/eliteperformance" target="_blank" class="social-contact-card tilt-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <a href="https://discord.gg/powertune" target="_blank" class="social-contact-card tilt-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                         <div class="flex flex-col items-center text-center">
                             <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-full flex items-center justify-center mb-4">
                                 <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -587,7 +771,7 @@
                     </a>
 
                     <!-- Twitter/X -->
-                    <a href="https://twitter.com/eliteperformance" target="_blank" class="social-contact-card tilt-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <a href="https://twitter.com/powertune" target="_blank" class="social-contact-card tilt-card bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                         <div class="flex flex-col items-center text-center">
                             <div class="w-16 h-16 bg-gradient-to-br from-gray-800 to-black rounded-full flex items-center justify-center mb-4">
                                 <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -596,7 +780,7 @@
                             </div>
                             <h3 class="text-xl font-bold mb-2">X (Twitter)</h3>
                             <p class="text-gray-600 dark:text-gray-400 text-sm mb-3">Latest updates & news</p>
-                            <span class="text-primary font-semibold">@eliteperformance</span>
+                            <span class="text-primary font-semibold">@powertune</span>
                         </div>
                     </a>
                 </div>
@@ -622,14 +806,15 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-12" role="contentinfo">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4" id="footer-about-title">About Us</h3>
-                    <p class="text-gray-400" id="footer-about-text">Elite Performance Tuning - Your trusted partner for professional automotive performance enhancement.</p>
+                    <p class="text-gray-400" id="footer-about-text">PowerTune - Your trusted partner for professional automotive performance enhancement.</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4" id="footer-services-title">Services</h3>
@@ -665,7 +850,8 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p id="footer-copyright">&copy; 2024 Elite Performance Tuning. All rights reserved.</p>
+                <p id="footer-copyright">&copy; 2024 PowerTune. All rights reserved.</p>
+                <p class="mt-2 text-sm">Designed &amp; Developed by <a href="https://antoniohaluzan.com" class="text-primary hover:text-secondary transition-colors font-semibold">Antonio Halužan</a></p>
             </div>
         </div>
     </footer>
@@ -681,7 +867,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
 
     <!-- AOS -->
-    <script src="https://unpkg.com/[email protected]/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Lenis -->
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>

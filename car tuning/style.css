@@ -1,4 +1,7 @@
-/* Custom Styles for Elite Performance Tuning */
+/* PowerTune - Custom Styles
+ * Author: Antonio Halužan
+ * Copyright © 2024 Antonio Halužan. All rights reserved.
+ */
 
 :root {
     --primary: #ff6b35;
@@ -38,7 +41,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+    transition: transform 1.2s ease-in-out, opacity 1.2s ease-in-out;
 }
 
 /* Left image slides upward along diagonal */
