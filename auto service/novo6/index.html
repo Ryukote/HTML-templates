@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTO SERVIS [PREZIME] | Profesionalno Održavanje</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        garageRed: '#d90429', // Klasična mehaničarska crvena
+                        garageDark: '#1a1d23', // Boja asfalta/alata
+                        garageGray: '#8d99ae',
+                    },
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Oswald', 'sans-serif'] 
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        html.lenis { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+        .heading-font { font-family: 'Oswald', sans-serif; }
+        
+        /* Suptilna tekstura u pozadini koja podsjeća na metal ili beton */
+        .bg-workshop {
+            background-color: #1a1d23;
+            background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+        }
+        
+        .card-tilt {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: border-color 0.3s ease;
+        }
+        .card-tilt:hover { border-color: #d90429; }
+    </style>
+</head>
+<body class="bg-workshop text-white antialiased">
+
+    <nav class="fixed w-full z-50 bg-garageDark/90 backdrop-blur-md border-b border-white/5 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="heading-font text-2xl font-bold tracking-tighter flex items-center gap-2">
+                <span class="bg-garageRed px-2 py-1 text-white">AUTO</span> SERVIS
+            </div>
+            <div class="hidden md:flex gap-8 font-bold uppercase text-xs tracking-widest">
+                <a href="#usluge" class="hover:text-garageRed transition">Usluge</a>
+                <a href="#o-nama" class="hover:text-garageRed transition">O nama</a>
+                <a href="#kontakt" class="text-garageRed">09X XXX XXXX</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center relative overflow-hidden px-6 pt-20">
+        <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <span class="text-garageRed font-black uppercase tracking-[0.3em] text-sm block mb-4 italic">Provjerena kvaliteta</span>
+                <h1 class="heading-font text-6xl md:text-8xl font-black uppercase leading-none mb-8">
+                    BRZ POPRAVAK. <br> <span class="text-garageGray">SIGURAN PUT.</span>
+                </h1>
+                <p class="text-lg text-gray-400 max-w-lg mb-10 leading-relaxed">
+                    Preko 20 godina iskustva u održavanju svih vrsta vozila. Koristimo najmoderniju opremu i originalne rezervne dijelove.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#kontakt" class="bg-garageRed hover:bg-white hover:text-garageRed text-white px-10 py-5 font-black uppercase tracking-tighter transition-all duration-300 transform -skew-x-12">
+                        <span class="inline-block skew-x-12">Rezerviraj termin</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="relative" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800" alt="Radiona" class="rounded-2xl shadow-2xl border-b-8 border-garageRed">
+                <div class="absolute -bottom-6 -left-6 bg-white text-garageDark p-6 rounded-xl shadow-2xl hidden md:block">
+                    <p class="heading-font text-4xl font-bold leading-none">20+</p>
+                    <p class="uppercase text-[10px] font-black tracking-widest opacity-50">Godina iskustva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="usluge" class="py-32 bg-garageDark/50">
+        <div class="container mx-auto px-6">
+            <div class="mb-20 text-center" data-aos="fade-up">
+                <h2 class="heading-font text-5xl font-black uppercase italic">Što radimo najbolje?</h2>
+                <div class="w-20 h-1.5 bg-garageRed mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-tilt p-10 rounded-2xl group" data-tilt data-aos="fade-up">
+                    <h3 class="heading-font text-2xl font-bold uppercase mb-4 text-garageRed italic">01 / Mehanika</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Od izmjene ulja i filtera do kompletnih generalki motora i mjenjača. Brzo i pouzdano.</p>
+                    <ul class="text-[11px] uppercase font-bold tracking-widest text-gray-500 space-y-2">
+                        <li>• Veliki i mali servis</li>
+                        <li>• Sustavi kočenja</li>
+                        <li>• Amortizeri i ovjes</li>
+                    </ul>
+                </div>
+
+                <div class="card-tilt p-10 rounded-2xl group bg-garageRed/5" data-tilt data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="heading-font text-2xl font-bold uppercase mb-4 text-garageRed italic">02 / Dijagnostika</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Pronađite uzrok kvara u rekordnom roku uz najmodernije uređaje za sva europska i azijska vozila.</p>
+                    <ul class="text-[11px] uppercase font-bold tracking-widest text-gray-500 space-y-2">
+                        <li>• Brisanje grešaka</li>
+                        <li>• Provjera elektronike</li>
+                        <li>• Kodiranje ključeva</li>
+                    </ul>
+                </div>
+
+                <div class="card-tilt p-10 rounded-2xl group" data-tilt data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="heading-font text-2xl font-bold uppercase mb-4 text-garageRed italic">03 / Klima & Struja</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Punjenje klima uređaja novim plinom, dezinfekcija ozonom i popravak alternatora i elektropokretača.</p>
+                    <ul class="text-[11px] uppercase font-bold tracking-widest text-gray-500 space-y-2">
+                        <li>• Punjenje klime</li>
+                        <li>• Dezinfekcija sustava</li>
+                        <li>• Akumulatori</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 container mx-auto px-6 overflow-hidden">
+        <h2 class="heading-font text-4xl font-black uppercase mb-12 italic" data-aos="fade-right">Galerija Radova</h2>
+        <div class="splide" id="main-slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide p-2">
+                        <img src="https://images.unsplash.com/photo-1517524008436-bbdb53c50039?q=80&w=800" class="rounded-2xl h-80 w-full object-cover">
+                    </li>
+                    <li class="splide__slide p-2">
+                        <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=800" class="rounded-2xl h-80 w-full object-cover">
+                    </li>
+                    <li class="splide__slide p-2">
+                        <img src="https://images.unsplash.com/photo-1504222490345-c075b6008014?q=80&w=800" class="rounded-2xl h-80 w-full object-cover">
+                    </li>
+                    <li class="splide__slide p-2">
+                        <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?q=80&w=800" class="rounded-2xl h-80 w-full object-cover">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt" class="bg-black py-20 px-6 mt-20 relative border-t-4 border-garageRed">
+        <div class="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-16 items-center">
+            <div data-aos="fade-up">
+                <div class="heading-font text-4xl font-bold tracking-tighter uppercase mb-4">
+                    <span class="text-garageRed italic">AUTO</span> SERVIS
+                </div>
+                <p class="text-gray-500 text-sm">Zakažite svoj termin još danas i osigurajte dugovječnost svog ljubimca na četiri kotača.</p>
+            </div>
+            
+            <div class="bg-garageDark p-8 rounded-2xl border border-white/5" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-xs uppercase font-black text-garageRed mb-2 tracking-widest">Nazovite nas</p>
+                <p class="heading-font text-3xl font-bold tracking-tight">091 123 4567</p>
+                <p class="text-gray-500 text-xs mt-4 italic font-bold">PON - PET: 08:00 - 17:00</p>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200">
+                <p class="text-xs uppercase font-black text-garageRed mb-2 tracking-widest">Naša adresa</p>
+                <p class="text-xl font-bold">Ulica Mehaničara 55, 10000 Zagreb</p>
+                <a href="#" class="text-garageRed text-xs font-black uppercase mt-4 block underline">Prikaži na karti</a>
+            </div>
+        </div>
+        
+        <div class="text-center mt-20 pt-10 border-t border-white/5 text-[10px] text-gray-700 uppercase tracking-[0.3em]">
+            &copy; 2026 AUTO SERVIS [PREZIME] | SVA PRAVA PRIDRŽANA
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <script>
+        // Lenis Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        // AOS
+        AOS.init({ duration: 1000, once: true });
+
+        // Splide
+        new Splide('#main-slider', {
+            type: 'loop',
+            perPage: 3,
+            gap: '1rem',
+            autoplay: true,
+            breakpoints: { 1024: { perPage: 2 }, 640: { perPage: 1 } }
+        }).mount();
+
+        // Vanilla Tilt
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 10,
+            speed: 500,
+            glare: true,
+            "max-glare": 0.1
+        });
+    </script>
+</body>
+</html>

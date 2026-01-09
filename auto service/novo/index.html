@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECHANIC PRO | Napredna Automehanika</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#e11d48', // Sportska crvena
+                        darkBg: '#0f172a',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0f172a; color: white; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .hero-img {
+            background: linear-gradient(to right, #0f172a 30%, transparent), url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-black tracking-tighter uppercase">
+                <span class="text-accent">M</span>echanic<span class="text-accent">PRO</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium uppercase tracking-widest">
+                <a href="#usluge" class="hover:text-accent transition">Usluge</a>
+                <a href="#stats" class="hover:text-accent transition">Iskustvo</a>
+                <a href="#kontakt" class="hover:text-accent transition">Kontakt</a>
+            </nav>
+            <a href="tel:091234567" class="bg-accent hover:bg-red-700 text-white px-5 py-2 rounded-xl text-xs font-bold transition uppercase">Termin</a>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen flex items-center hero-img">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl" data-aos="fade-right">
+                <div class="inline-block bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-bold uppercase mb-4">
+                    Specijalisti za njemačka i japanska vozila
+                </div>
+                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-none uppercase">
+                    Preciznost <br> <span class="text-accent">bez kompromisa.</span>
+                </h1>
+                <p class="text-gray-400 text-lg mb-8 max-w-lg">
+                    Vrhunska dijagnostika, precizna mehanika i tim koji voli automobile koliko i vi. Vaše vozilo zaslužuje najbolje.
+                </p>
+                <div class="flex space-x-4">
+                    <button class="bg-accent px-8 py-4 rounded-2xl font-bold hover:bg-red-700 transition transform hover:scale-105">
+                        DOSTUPNE USLUGE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="py-12 border-y border-white/5 bg-black/20">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-4xl font-black text-accent">15+</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest mt-1">Godina rada</div>
+            </div>
+            <div>
+                <div class="text-4xl font-black text-accent">4.9</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest mt-1">Google Ocjena</div>
+            </div>
+            <div>
+                <div class="text-4xl font-black text-accent">24/7</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest mt-1">Vučna služba</div>
+            </div>
+            <div>
+                <div class="text-4xl font-black text-accent">100%</div>
+                <div class="text-gray-500 text-xs uppercase tracking-widest mt-1">Garancija</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="usluge" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                <div>
+                    <h2 class="text-4xl font-black uppercase">Naša Specijalnost</h2>
+                    <p class="text-gray-500 mt-2">Kompletna briga o vašem ljubimcu na jednom mjestu.</p>
+                </div>
+                <div class="text-accent font-bold tracking-widest text-sm uppercase">Saznaj više →</div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass p-10 rounded-3xl hover:border-accent/50 transition duration-500 group">
+                    <div class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent transition">
+                        <svg class="w-6 h-6 text-accent group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase">Brza Dijagnostika</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed italic">
+                        Otkrivanje kvara u manje od 30 minuta pomoću najnovijih kompjuterskih sustava.
+                    </p>
+                </div>
+
+                <div class="glass p-10 rounded-3xl hover:border-accent/50 transition duration-500 group">
+                    <div class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent transition">
+                        <svg class="w-6 h-6 text-accent group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase">Generalni Servis</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed italic">
+                        Od izmjene ulja do kompleksnih popravaka motora i mjenjača.
+                    </p>
+                </div>
+
+                <div class="glass p-10 rounded-3xl hover:border-accent/50 transition duration-500 group">
+                    <div class="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent transition">
+                        <svg class="w-6 h-6 text-accent group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase">Priprema za Tehnički</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed italic">
+                        Pregled cijelog vozila kako biste prošli tehnički pregled bez ikakvog stresa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="py-24 bg-black/30">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-up">
+                <h2 class="text-5xl font-black mb-8 uppercase">Gdje smo?</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-accent font-bold mt-1 tracking-tighter uppercase text-xs">Lokacija</div>
+                        <div class="text-gray-400">Industrijska zona Jug 44,<br> 10000 Zagreb</div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-accent font-bold mt-1 tracking-tighter uppercase text-xs">Kontakt</div>
+                        <div class="text-gray-400 font-bold text-xl">091 999 8888</div>
+                    </div>
+                    <div class="pt-6 border-t border-white/5">
+                        <p class="text-gray-600 text-sm italic">"Kvaliteta koju možete osjetiti u svakom kilometru."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="h-96 glass rounded-3xl overflow-hidden relative">
+                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-30 grayscale" alt="Map">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="bg-accent p-4 rounded-full animate-bounce">📍</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-gray-700 text-[10px] uppercase tracking-[0.2em]">
+        &copy; 2024 MechanicPRO Performance. Made by [Tvoje Ime].
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

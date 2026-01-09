@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTO CENTAR [NAZIV] | Tehnička Savršenost</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premiumBlue: '#0052cc', // Duboka boja povjerenja (kao VW ili BMW)
+                        surfaceDark: '#0f1115',
+                        borderLight: '#2a2e35',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        html.lenis { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+        body { font-family: 'Space Grotesk', sans-serif; }
+        
+        /* Grid pozadina za "blueprint" osjećaj */
+        .blueprint-bg {
+            background-color: #0f1115;
+            background-image: radial-gradient(#2a2e35 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .service-number {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+            font-size: 4rem;
+            line-height: 1;
+        }
+
+        .cta-button {
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="blueprint-bg text-white">
+
+    <nav class="fixed top-0 w-full z-50 p-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center bg-surfaceDark border border-borderLight p-4 rounded-lg shadow-2xl">
+            <div class="text-xl font-bold tracking-tight uppercase">
+                <span class="text-premiumBlue font-black italic">PRO</span>DOKTOR
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="tel:09xxxx" class="text-sm font-bold hover:text-premiumBlue transition hidden md:block uppercase">Hitna Linija</a>
+                <div class="w-px h-6 bg-borderLight hidden md:block"></div>
+                <a href="#kontakt" class="bg-premiumBlue text-white px-6 py-2 text-xs font-black uppercase tracking-tighter cta-button">Termin</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center pt-32 px-6">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-7" data-aos="fade-up">
+                    <h1 class="text-7xl md:text-9xl font-bold leading-none mb-10 tracking-tighter uppercase">
+                        KIRURŠKA <br> <span class="text-premiumBlue italic">PRECIZNOST.</span>
+                    </h1>
+                    <p class="text-gray-400 text-lg max-w-lg mb-12 border-l-2 border-premiumBlue pl-8">
+                        Vrhunska auto-mehanika bazirana na podacima, a ne na nagađanju. Svaki milimetar je bitan.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-xs font-bold tracking-[0.2em] uppercase text-gray-500">
+                        <div>
+                            <p class="text-white text-2xl mb-1 tracking-tighter">01.</p>
+                            ANALIZA
+                        </div>
+                        <div>
+                            <p class="text-white text-2xl mb-1 tracking-tighter">02.</p>
+                            POPRAVAK
+                        </div>
+                        <div>
+                            <p class="text-white text-2xl mb-1 tracking-tighter">03.</p>
+                            TEST
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative" data-aos="zoom-in-left">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800" class="rounded-3xl border border-borderLight grayscale hover:grayscale-0 transition duration-1000">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="usluge" class="py-32 border-y border-borderLight bg-surfaceDark/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 border-l border-t border-borderLight">
+                <div class="p-12 border-r border-b border-borderLight group hover:bg-premiumBlue transition-all duration-500" data-tilt>
+                    <div class="service-number group-hover:text-white transition duration-500 mb-8">01</div>
+                    <h3 class="text-2xl font-bold uppercase mb-4 tracking-tighter">KOČNICE</h3>
+                    <p class="text-gray-500 group-hover:text-white/80 text-sm leading-relaxed">Sigurnost bez kompromisa. Kompletna obrada i zamjena diskova.</p>
+                </div>
+                <div class="p-12 border-r border-b border-borderLight group hover:bg-premiumBlue transition-all duration-500" data-tilt>
+                    <div class="service-number group-hover:text-white transition duration-500 mb-8">02</div>
+                    <h3 class="text-2xl font-bold uppercase mb-4 tracking-tighter">MOTOR</h3>
+                    <p class="text-gray-500 group-hover:text-white/80 text-sm leading-relaxed">Optimizacija rada, popravak turbina i podešavanje faze.</p>
+                </div>
+                <div class="p-12 border-r border-b border-borderLight group hover:bg-premiumBlue transition-all duration-500" data-tilt>
+                    <div class="service-number group-hover:text-white transition duration-500 mb-8">03</div>
+                    <h3 class="text-2xl font-bold uppercase mb-4 tracking-tighter">SOFTWARE</h3>
+                    <p class="text-gray-500 group-hover:text-white/80 text-sm leading-relaxed">Puna podrška za sistemska ažuriranja i brisanje grešaka.</p>
+                </div>
+                <div class="p-12 border-r border-b border-borderLight group hover:bg-premiumBlue transition-all duration-500" data-tilt>
+                    <div class="service-number group-hover:text-white transition duration-500 mb-8">04</div>
+                    <h3 class="text-2xl font-bold uppercase mb-4 tracking-tighter">KLIMA</h3>
+                    <p class="text-gray-500 group-hover:text-white/80 text-sm leading-relaxed">Specijalizirani servis rashladnih sustava nove generacije.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="splide" id="grid-slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide p-2">
+                        <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf0a3?q=80&w=800" class="h-[500px] w-full object-cover rounded-sm border border-borderLight">
+                    </li>
+                    <li class="splide__slide p-2">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=800" class="h-[500px] w-full object-cover rounded-sm border border-borderLight">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt" class="py-32 border-t border-borderLight relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div data-aos="fade-right">
+                    <h2 class="text-6xl font-bold uppercase tracking-tighter mb-4">SPREMNI ZA <br> <span class="text-premiumBlue italic">REVIZIJU?</span></h2>
+                    <p class="text-gray-500 font-bold uppercase text-[10px] tracking-widest">Digitalni Dosje Vašeg Vozila Počinje Ovdje</p>
+                </div>
+                <div class="text-right" data-aos="fade-left">
+                    <p class="text-gray-500 uppercase text-xs font-black mb-4 tracking-widest italic">Radni Nalozi na:</p>
+                    <a href="tel:09xxxx" class="text-5xl md:text-7xl font-bold hover:text-premiumBlue transition tracking-tighter">095 888 7777</a>
+                    <p class="text-sm mt-8 opacity-40 uppercase tracking-[0.4em]">Industrijska Zona BB, Osijek</p>
+                </div>
+            </div>
+            <div class="mt-32 pt-10 border-t border-borderLight text-[10px] text-gray-800 font-bold uppercase tracking-[1em]">
+                System Architecture 2026 &copy; All Rights Reserved
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <script>
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        AOS.init({ duration: 1000, once: true });
+
+        new Splide('#grid-slider', {
+            type: 'loop',
+            perPage: 2,
+            gap: '1rem',
+            autoplay: true,
+            breakpoints: { 768: { perPage: 1 } }
+        }).mount();
+
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 5,
+            speed: 1000,
+            glare: true,
+            "max-glare": 0.05
+        });
+    </script>
+</body>
+</html>

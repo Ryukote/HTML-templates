@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS PRO | Profesionalni Auto Servis</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#e63946', // Agresivna crvena
+                        darker: '#0a0a0a',
+                        surface: '#121212',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html.lenis { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .text-stroke { -webkit-text-stroke: 1px rgba(255,255,255,0.2); color: transparent; }
+        .hero-bg { background: linear-gradient(to bottom, rgba(10,10,10,0.8), #0a0a0a), url('https://images.unsplash.com/photo-1517524008436-bbdb53c50039?q=80&w=1920&auto=format&fit=crop'); background-size: cover; background-position: center; }
+    </style>
+</head>
+<body class="bg-darker text-white antialiased">
+
+    <nav class="fixed w-full z-[100] px-6 py-4 transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center bg-white/5 backdrop-blur-xl border border-white/10 p-4 rounded-2xl shadow-2xl">
+            <div class="text-2xl font-black italic tracking-tighter">
+                AS <span class="text-brand">PRO</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#usluge" class="hover:text-brand transition">Usluge</a>
+                <a href="#radiona" class="hover:text-brand transition">Galerija</a>
+                <a href="#kontakt" class="hover:text-brand transition text-brand underline underline-offset-8">Termin</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center hero-bg relative px-6 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-12 -translate-y-12 w-[500px] h-[500px] bg-brand/20 rounded-full blur-[120px] -z-10"></div>
+        
+        <div class="text-center" data-aos="zoom-out" data-aos-duration="1500">
+            <h2 class="text-stroke text-7xl md:text-9xl font-black uppercase leading-none opacity-50 mb-[-2rem]">PERFORMANCE</h2>
+            <h1 class="text-5xl md:text-8xl font-black uppercase mb-8 leading-tight">Servis koji <br><span class="text-brand">radi razliku.</span></h1>
+            <p class="text-gray-400 text-lg max-w-xl mx-auto mb-10">Od redovnog održavanja do najzahtjevnijih popravaka. Koristimo najnoviju dijagnostiku i vrhunske zamjenske dijelove.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="tel:09xxxx" class="px-10 py-5 bg-brand text-white rounded-full font-black text-xl hover:shadow-[0_0_30px_rgba(230,57,70,0.5)] transition-all">NAZOVI ODMAH</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="usluge" class="py-32 container mx-auto px-6">
+        <div class="mb-20" data-aos="fade-right">
+            <span class="text-brand font-bold uppercase tracking-[0.3em] text-sm italic">Ekspertiza</span>
+            <h2 class="text-5xl font-black uppercase mt-2">Što popravljamo?</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-10 rounded-3xl group" data-tilt data-aos="fade-up">
+                <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand transition-colors duration-500">
+                    <svg class="w-8 h-8 text-brand group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black uppercase mb-4 tracking-tighter">Mehanika</h3>
+                <p class="text-gray-500 italic leading-relaxed text-sm">Kompletan servis motora, izmjena remenja, kvačila i kočnica uz korištenje isključivo provjerenih dijelova.</p>
+            </div>
+
+            <div class="bg-brand p-10 rounded-3xl group shadow-2xl shadow-brand/20" data-tilt data-aos="fade-up" data-aos-delay="100">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-8">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black uppercase mb-4 tracking-tighter">Dijagnostika</h3>
+                <p class="text-white/80 italic leading-relaxed text-sm">Napredno očitavanje grešaka, kodiranje modula i rješavanje problema s elektronikom na svim markama vozila.</p>
+            </div>
+
+            <div class="glass-card p-10 rounded-3xl group" data-tilt data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand transition-colors duration-500">
+                    <svg class="w-8 h-8 text-brand group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black uppercase mb-4 tracking-tighter">Klima Uređaji</h3>
+                <p class="text-gray-500 italic leading-relaxed text-sm">Servis i punjenje klima uređaja plinom R134a i novim plinom R1234yf. Dezinfekcija ozonom.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="radiona" class="py-24 bg-surface/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black uppercase mb-12 italic tracking-tight" data-aos="fade-up">Naša Radiona</h2>
+            
+            <div class="splide" id="image-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide p-4">
+                            <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?q=80&w=1200" class="rounded-3xl h-[500px] w-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </li>
+                        <li class="splide__slide p-4">
+                            <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=1200" class="rounded-3xl h-[500px] w-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </li>
+                        <li class="splide__slide p-4">
+                            <img src="https://images.unsplash.com/photo-1504222490345-c075b6008014?q=80&w=1200" class="rounded-3xl h-[500px] w-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="py-32 overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative">
+            <div class="absolute -top-32 left-1/2 -translate-x-1/2 text-[15rem] font-black italic text-white/5 whitespace-nowrap -z-10 select-none uppercase">KONTAKT</div>
+            
+            <h2 class="text-6xl font-black uppercase mb-8 leading-none" data-aos="fade-up">Trebate termin?</h2>
+            <div class="flex flex-col items-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-gray-400 max-w-md text-center mb-6">Ne ostavljajte popravak za zadnji tren. Javite nam se danas i osigurajte svoje mjesto.</p>
+                <div class="bg-surface border border-white/10 p-8 rounded-[2rem] flex flex-col md:flex-row gap-12 items-center">
+                    <div class="text-center md:text-left leading-tight">
+                        <p class="text-brand font-bold uppercase text-xs tracking-[0.4em] mb-2 italic">Telefon</p>
+                        <p class="text-4xl font-black">091 123 4567</p>
+                    </div>
+                    <div class="hidden md:block w-[1px] h-12 bg-white/10"></div>
+                    <div class="text-center md:text-left leading-tight">
+                        <p class="text-brand font-bold uppercase text-xs tracking-[0.4em] mb-2 italic">Adresa</p>
+                        <p class="text-2xl font-black">Zagrebačka 123, Sesvete</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 border-t border-white/5 text-center text-gray-600 text-[10px] uppercase tracking-[0.5em]">
+        &copy; 2026 AS PRO SERVIS | Made by [Tvoje Ime]
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <script>
+        // Smooth Scroll (Lenis)
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // AOS
+        AOS.init({ duration: 1000, once: true });
+
+        // Splide
+        new Splide('#image-slider', {
+            type: 'loop',
+            perPage: 2,
+            gap: '2rem',
+            autoplay: true,
+            breakpoints: { 768: { perPage: 1 } }
+        }).mount();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.children[0].classList.add('bg-black/80');
+            } else {
+                nav.classList.remove('py-2');
+                nav.children[0].classList.remove('bg-black/80');
+            }
+        });
+    </script>
+</body>
+</html>

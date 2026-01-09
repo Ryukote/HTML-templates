@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDIO L'ART | Umjetnost Vaše Kose</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        studioBase: '#fcfaf7', 
+                        studioAccent: '#1a1a1a', 
+                        studioGold: '#c5a47e', 
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:italic,wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        html.lenis { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+        body { background: #fcfaf7; color: #1a1a1a; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        /* Split Screen Logic */
+        .sticky-side { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+        
+        /* Image Swap System */
+        .bg-image-container {
+            position: absolute;
+            inset: 0;
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+        }
+        .bg-image-container.active { opacity: 1; }
+
+        .image-frame { 
+            border-radius: 400px 400px 0 0; 
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .floating-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 8vw;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(197, 164, 126, 0.3);
+            position: absolute;
+            z-index: -1;
+            white-space: nowrap;
+        }
+
+        .map-wrapper iframe {
+            filter: grayscale(0.2) sepia(0.2) contrast(0.9);
+            border-radius: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-50 p-8 flex justify-between items-center mix-blend-difference">
+        <div class="font-serif italic text-2xl font-bold tracking-widest uppercase text-studioGold">L'ART</div>
+        <a href="#kontakt" class="border border-studioGold text-studioGold px-8 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-studioGold hover:text-white transition-all duration-500">Rezerviraj</a>
+    </nav>
+
+    <div class="flex flex-col lg:flex-row">
+        
+        <div class="hidden lg:block lg:w-1/2 sticky-side bg-[#e5e0d8]">
+            
+            <div id="img-hero" class="bg-image-container active flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f8717368?q=80&w=1000" class="image-frame" alt="Hero Hair">
+                <div class="absolute bottom-24 left-24">
+                    <p class="font-serif italic text-7xl text-white mix-blend-overlay opacity-80">Couture.</p>
+                </div>
+            </div>
+
+            <div id="img-services" class="bg-image-container flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000" class="image-frame" alt="Hair Coloring">
+                <div class="absolute bottom-24 left-24">
+                    <p class="font-serif italic text-7xl text-white mix-blend-overlay opacity-80">Atelier.</p>
+                </div>
+            </div>
+
+            <div id="img-location" class="bg-image-container flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000" class="image-frame" alt="Salon Interior">
+                <div class="absolute bottom-24 left-24">
+                    <p class="font-serif italic text-7xl text-white mix-blend-overlay opacity-80">Oasis.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lg:w-1/2 px-8 md:px-20">
+            
+            <section id="section-hero" class="min-h-screen flex flex-col justify-center py-32 relative">
+                <span class="floating-text top-20 left-0">STYLE</span>
+                <span class="text-studioGold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block" data-aos="fade-up">Atelier L'Art Zagreb</span>
+                <h1 class="font-serif text-6xl md:text-8xl mb-10 leading-tight" data-aos="fade-up">Kosa je Vaša <br> <span class="italic text-studioGold">kruna.</span></h1>
+                <p class="text-neutral-500 leading-relaxed text-lg mb-10">
+                    U srcu Zagreba stvaramo vizualni identitet koji nadilazi trendove. Studio L'Art je utočište za one koji traže besprijekornu tehniku i personaliziranu estetiku.
+                </p>
+                <div class="w-20 h-[1px] bg-studioGold"></div>
+            </section>
+
+            <section id="section-services" class="min-h-screen flex flex-col justify-center py-32 relative">
+                <span class="floating-text -top-10 right-0 opacity-40">SERVICES</span>
+                <h2 class="font-serif text-4xl mb-16 italic">Ekskluzivni Ritual</h2>
+                
+                <div class="space-y-12">
+                    <div class="flex justify-between items-end border-b border-studioGold/20 pb-4 group cursor-pointer" data-aos="fade-up">
+                        <div>
+                            <h3 class="font-serif text-2xl group-hover:text-studioGold transition">Sculptural Cut</h3>
+                            <p class="text-[10px] uppercase tracking-widest text-neutral-400 mt-2 italic">Šišanje koje definira karakter</p>
+                        </div>
+                        <span class="font-serif italic text-xl">45€</span>
+                    </div>
+
+                    <div class="flex justify-between items-end border-b border-studioGold/20 pb-4 group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                        <div>
+                            <h3 class="font-serif text-2xl group-hover:text-studioGold transition">L'Art Balayage</h3>
+                            <p class="text-[10px] uppercase tracking-widest text-neutral-400 mt-2 italic">Ručno slikanje pramenova</p>
+                        </div>
+                        <span class="font-serif italic text-xl">110€</span>
+                    </div>
+
+                    <div class="flex justify-between items-end border-b border-studioGold/20 pb-4 group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                        <div>
+                            <h3 class="font-serif text-2xl group-hover:text-studioGold transition">Organic Detox</h3>
+                            <p class="text-[10px] uppercase tracking-widest text-neutral-400 mt-2 italic">Terapija za vlasište i sjaj</p>
+                        </div>
+                        <span class="font-serif italic text-xl">30€</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-location" class="min-h-screen flex flex-col justify-center py-32">
+                <h2 class="font-serif text-4xl mb-8 italic">Pronađite Atelier.</h2>
+                <p class="text-neutral-500 mb-10 italic uppercase text-[10px] tracking-widest">Ul. kralja Zvonimira 14, Zagreb</p>
+                
+                <div class="w-full h-[400px] map-wrapper shadow-xl" data-aos="zoom-in">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d2781.789125574578!2d15.9898!3d45.8115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6f6e8c8c8c7%3A0x123456789!2zWnZvbmltaXJvdmEgMTQsIDEwMDAwIFphZ3JlYg!5e0!3m2!1shr!2shr!4v1700000000000" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </section>
+
+            <section id="kontakt" class="min-h-screen flex flex-col justify-center text-center pb-20">
+                <div class="bg-studioAccent text-white p-12 md:p-20 rounded-[4rem] relative overflow-hidden shadow-2xl">
+                    <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-10"></div>
+                    <h2 class="font-serif text-5xl mb-8 italic">Rezervirajte.</h2>
+                    <a href="tel:0911234567" class="text-3xl md:text-5xl font-light hover:text-studioGold transition duration-500 tracking-tighter italic block mb-12">091 123 4567</a>
+                    <div class="pt-10 border-t border-white/10 flex justify-center gap-10 opacity-60 text-[10px] font-bold tracking-[0.2em] uppercase">
+                        <a href="#" class="hover:text-studioGold transition">Instagram</a>
+                        <a href="#" class="hover:text-studioGold transition">Facebook</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Init Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // AOS Init
+        AOS.init({ duration: 1500, once: false });
+
+        // DYNAMIC IMAGE SWAP LOGIC
+        const sections = [
+            { id: 'section-hero', imgId: 'img-hero' },
+            { id: 'section-services', imgId: 'img-services' },
+            { id: 'section-location', imgId: 'img-location' }
+        ];
+
+        window.addEventListener('scroll', () => {
+            let currentSection = "";
+            
+            sections.forEach(section => {
+                const element = document.getElementById(section.id);
+                const rect = element.getBoundingClientRect();
+                // Ako je sekcija otprilike na sredini ekrana
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                    currentSection = section.imgId;
+                }
+            });
+
+            if (currentSection) {
+                document.querySelectorAll('.bg-image-container').forEach(img => {
+                    img.classList.remove('active');
+                });
+                document.getElementById(currentSection).classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

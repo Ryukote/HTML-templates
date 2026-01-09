@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAJSTOR [PREZIME] | Robusna Mehanika</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        iron: '#2d2d2d',
+                        oil: '#1a1a1a',
+                        caution: '#fbbf24', // Žuta kao na gradilištu/znakovima upozorenja
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        condensed: ['Roboto Condensed', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Roboto Condensed', sans-serif; background-color: #1a1a1a; color: #e5e7eb; }
+        .heading-font { font-family: 'Oswald', sans-serif; }
+        
+        .bg-industrial {
+            background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?q=80&w=1920&auto=format&fit=crop');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .yellow-stripe {
+            background: repeating-linear-gradient(45deg, #fbbf24, #fbbf24 10px, #000 10px, #000 20px);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-black border-b-4 border-caution py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="heading-font text-3xl font-bold tracking-tighter uppercase italic">
+                <span class="bg-caution text-black px-2 inline-block -skew-x-12">AUTO</span> SERVIS
+            </div>
+            <div class="hidden md:block text-right">
+                <p class="text-xs uppercase text-caution font-bold">Hitne intervencije:</p>
+                <p class="text-xl font-bold tracking-widest">09X / XXX - XXXX</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-industrial min-h-[80vh] flex items-center">
+        <div class="container mx-auto px-6 py-20">
+            <div class="max-w-3xl border-l-8 border-caution pl-8 py-4" data-aos="fade-left">
+                <h1 class="heading-font text-6xl md:text-8xl font-black uppercase leading-none mb-6">
+                    NEMA KVAROVA, <br> SAMO <span class="text-caution">RJEŠENJA.</span>
+                </h1>
+                <p class="text-2xl uppercase tracking-widest mb-10 text-gray-300">Pošten rad. Prava cijena. Bez filozofije.</p>
+                <a href="#kontakt" class="inline-block bg-caution text-black font-black px-12 py-5 text-xl uppercase hover:bg-white transition skew-x-[-10deg]">
+                    <span class="inline-block skew-x-[10deg]">Rezerviraj termin</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="yellow-stripe h-4 w-full"></div>
+
+    <section class="py-20 bg-iron">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div class="flex gap-4" data-aos="fade-up">
+                <span class="text-5xl text-caution font-black opacity-50 italic">01.</span>
+                <div>
+                    <h3 class="heading-font text-2xl font-bold uppercase mb-2">Popravak Motora</h3>
+                    <p class="text-gray-400">Od generalke do sitnih popravaka. Vraćamo snagu vašem motoru uz garanciju na dijelove.</p>
+                </div>
+            </div>
+            <div class="flex gap-4" data-aos="fade-up" data-aos-delay="100">
+                <span class="text-5xl text-caution font-black opacity-50 italic">02.</span>
+                <div>
+                    <h3 class="heading-font text-2xl font-bold uppercase mb-2">Podvozje i Kočnice</h3>
+                    <p class="text-gray-400">Sigurnost na prvom mjestu. Koristimo isključivo provjerene komponente vodećih proizvođača.</p>
+                </div>
+            </div>
+            <div class="flex gap-4" data-aos="fade-up" data-aos-delay="200">
+                <span class="text-5xl text-caution font-black opacity-50 italic">03.</span>
+                <div>
+                    <h3 class="heading-font text-2xl font-bold uppercase mb-2">Struja i Elektronika</h3>
+                    <p class="text-gray-400">Rješavamo probleme koje drugi ne mogu naći. Napredna dijagnostika za sve modele.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-oil relative overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1504222490345-c075b6008014?q=80&w=800&auto=format&fit=crop" 
+                     alt="Majstor" class="rounded border-4 border-iron shadow-2xl">
+            </div>
+            <div class="md:w-1/2" data-aos="fade-up">
+                <h2 class="heading-font text-5xl font-black uppercase mb-8">Preko 20 godina <br> pod haubom.</h2>
+                <p class="text-lg text-gray-400 mb-6 font-light">
+                    Ne trošimo vaše vrijeme na fancy čekaonice. Fokusirani smo na to da se vaš auto vrati na cestu što prije. Radimo onako kako se nekad radilo – temeljito i pošteno.
+                </p>
+                <ul class="space-y-3 font-bold uppercase tracking-tighter">
+                    <li class="flex items-center gap-2 text-caution"><span class="text-xl">✔</span> Originalni rezervni dijelovi</li>
+                    <li class="flex items-center gap-2 text-caution"><span class="text-xl">✔</span> Brzi servis u 24h</li>
+                    <li class="flex items-center gap-2 text-caution"><span class="text-xl">✔</span> Bez skrivenih troškova</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="py-20 bg-iron border-t-8 border-black">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="heading-font text-6xl font-black uppercase mb-10">Trebaš majstora?</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-8 items-center">
+                <div class="bg-black p-10 rounded-lg w-full md:w-auto">
+                    <p class="text-caution uppercase text-sm font-bold">Lokacija radione:</p>
+                    <p class="text-2xl font-bold">Ulica Obrtnika 55, 31000 Osijek</p>
+                </div>
+                <div class="bg-caution p-10 rounded-lg w-full md:w-auto text-black">
+                    <p class="uppercase text-sm font-black italic">Nazovi odmah za termin:</p>
+                    <p class="text-4xl font-black tracking-tighter">095 888 7777</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-10 text-center text-gray-600 uppercase text-xs tracking-widest">
+        <p>&copy; 2024 AUTO SERVIS [PREZIME] | SVA PRAVA PRIDRŽANA | Web by [Tvoje Ime]</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

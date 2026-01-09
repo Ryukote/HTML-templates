@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEHANIKA [PREZIME] | Snaga i Pouzdanost</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        heavyYellow: '#fbbf24', // Boja industrije i alata
+                        heavyDark: '#111111',
+                        heavyGray: '#1f2937',
+                    },
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'],
+                        impact: ['Oswald', 'sans-serif'] 
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        html.lenis { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+        .impact-font { font-family: 'Oswald', sans-serif; }
+        
+        /* Grunge tekstura za industrijski izgled */
+        .bg-industrial {
+            background-color: #111111;
+            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+        }
+        
+        .border-slanted {
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(251, 191, 36, 0.3);
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-industrial text-white antialiased">
+
+    <nav class="fixed w-full z-50 bg-heavyDark/95 border-b-2 border-heavyYellow/20 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="impact-font text-3xl font-bold tracking-tighter italic">
+                <span class="text-heavyYellow">MASTER</span>MEHANIKA
+            </div>
+            <div class="hidden md:flex gap-10 font-black uppercase text-[10px] tracking-[0.3em]">
+                <a href="#usluge" class="hover:text-heavyYellow transition">Usluge</a>
+                <a href="#galerija" class="hover:text-heavyYellow transition">Radiona</a>
+                <a href="#kontakt" class="bg-heavyYellow text-black px-4 py-1 border-slanted">KONTAKT</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center relative px-6 overflow-hidden">
+        <div class="absolute top-1/4 -left-20 text-outline text-[20vw] font-black uppercase italic pointer-events-none select-none">
+            SERVICE
+        </div>
+
+        <div class="container mx-auto relative z-10">
+            <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="1200">
+                <div class="inline-block bg-heavyYellow text-black font-black px-6 py-1 mb-6 border-slanted italic">
+                    DOKAZANA KVALITETA
+                </div>
+                <h1 class="impact-font text-7xl md:text-9xl font-black uppercase leading-[0.85] mb-8">
+                    ZAUSTAVITE <br> <span class="text-heavyYellow text-stroke">KVAROVE.</span>
+                </h1>
+                <p class="text-xl text-gray-400 font-medium mb-10 max-w-xl border-l-4 border-heavyYellow pl-6">
+                    Radimo sve: od osobnih automobila do lakih dostavnih vozila. Bez kompromisa, bez odgađanja.
+                </p>
+                <a href="tel:09xxxx" class="inline-flex items-center gap-4 bg-white text-black px-12 py-5 font-black uppercase text-xl hover:bg-heavyYellow transition-colors duration-300">
+                    POZOVI SERVIS 
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.1 15.1 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.72 11.72 0 003.7.59 1 1 0 011 1v3.94a1 1 0 01-1 1A16 16 0 013 4a1 1 0 011-1h3.94a1 1 0 011 1 11.72 11.72 0 00.59 3.7 1 1 0 01-.27 1.11z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="usluge" class="py-32 px-6">
+        <div class="container mx-auto grid md:grid-cols-3 gap-8">
+            <div class="bg-heavyGray/30 p-12 border-t-4 border-heavyYellow" data-tilt data-aos="fade-up">
+                <h3 class="impact-font text-3xl font-bold uppercase mb-4 italic">DIJAGNOSTIKA</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">Najnoviji softver za brzo otkrivanje grešaka na motoru, elektronici i sigurnosnim sustavima.</p>
+                <span class="text-heavyYellow font-black text-xs tracking-widest uppercase">Expert oprema →</span>
+            </div>
+
+            <div class="bg-heavyYellow p-12 text-black" data-tilt data-aos="fade-up" data-aos-delay="200">
+                <h3 class="impact-font text-3xl font-bold uppercase mb-4 italic text-black">BRZI SERVIS</h3>
+                <p class="text-black/80 mb-8 leading-relaxed">Izmjena ulja, filtera, kočnica i ovjesa unutar istog radnog dana. Vaš posao ne smije čekati.</p>
+                <span class="text-black font-black text-xs tracking-widest uppercase italic">Uvijek dostupni →</span>
+            </div>
+
+            <div class="bg-heavyGray/30 p-12 border-t-4 border-heavyYellow" data-tilt data-aos="fade-up" data-aos-delay="400">
+                <h3 class="impact-font text-3xl font-bold uppercase mb-4 italic text-white">GENERALE</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">Specijalizirani za popravke motora, mjenjača i kvačila uz jamstvo na sve ugrađene dijelove.</p>
+                <span class="text-heavyYellow font-black text-xs tracking-widest uppercase">Dugovječnost →</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerija" class="py-24 bg-black/40">
+        <div class="container mx-auto px-6">
+            <div class="splide" id="industrial-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide p-2">
+                            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800" class="grayscale hover:grayscale-0 transition-all duration-700 h-96 w-full object-cover">
+                        </li>
+                        <li class="splide__slide p-2">
+                            <img src="https://images.unsplash.com/photo-1517524008436-bbdb53c50039?q=80&w=800" class="grayscale hover:grayscale-0 transition-all duration-700 h-96 w-full object-cover border-l-8 border-heavyYellow">
+                        </li>
+                        <li class="splide__slide p-2">
+                            <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=800" class="grayscale hover:grayscale-0 transition-all duration-700 h-96 w-full object-cover">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt" class="py-24 px-6 border-t-8 border-heavyYellow bg-heavyDark">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+            <div class="text-center md:text-left">
+                <h2 class="impact-font text-6xl font-black uppercase italic leading-none mb-4 text-white">DOLAZITE?</h2>
+                <p class="text-heavyYellow font-bold tracking-widest uppercase">Zagreb, Industrijska Cesta 42</p>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-end">
+                <p class="text-[10px] font-black tracking-[0.5em] text-gray-500 uppercase mb-4">Centralni broj</p>
+                <a href="tel:091234567" class="impact-font text-5xl md:text-7xl font-bold hover:text-heavyYellow transition italic leading-none">091 234 567</a>
+            </div>
+        </div>
+        
+        <div class="container mx-auto mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-[10px] text-gray-600 font-bold uppercase tracking-[0.3em]">
+            <p>&copy; 2026 MASTER MEHANIKA</p>
+            <p>DIZAJN: [TVOJE IME]</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <script>
+        // Init Lenis
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        // Init AOS
+        AOS.init({ duration: 1000, once: true });
+
+        // Init Splide
+        new Splide('#industrial-slider', {
+            type: 'loop',
+            perPage: 2,
+            gap: '2rem',
+            autoplay: true,
+            breakpoints: { 768: { perPage: 1 } }
+        }).mount();
+
+        // Init Tilt
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 12,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2
+        });
+    </script>
+</body>
+</html>

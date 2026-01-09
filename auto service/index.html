@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Servis [IME] | Popravak i Održavanje</title>
+    <meta name="description" content="Brz i pouzdan automehaničar. Vršimo servise, dijagnostiku i popravke svih vrsta vozila.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f97316', // Mehaničarska narančasta
+                        secondary: '#1e293b',
+                        dark: '#111111',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link:hover { color: #f97316; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-black text-secondary tracking-tighter uppercase italic">AUTO<span class="text-primary">SERVIS</span></span>
+            </div>
+            <ul class="hidden md:flex space-x-8 font-bold text-sm uppercase tracking-wide">
+                <li><a href="#usluge" class="nav-link transition">Usluge</a></li>
+                <li><a href="#o-nama" class="nav-link transition">O nama</a></li>
+                <li><a href="#galerija" class="nav-link transition">Radiona</a></li>
+                <li><a href="#kontakt" class="px-5 py-2 bg-primary text-white rounded-md hover:bg-orange-600 transition">Nazovi Odmah</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="h-screen flex items-center justify-center hero-gradient text-white text-center px-6">
+        <div data-aos="zoom-out" data-aos-duration="1000">
+            <h1 class="text-5xl md:text-7xl font-black uppercase mb-4 tracking-tight">Vaš auto u <span class="text-primary">sigurnim</span> rukama</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">Vršimo kompletan servis, brzu dijagnostiku i popravke motora. Dođite i uvjerite se u kvalitetu.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="tel:0911234567" class="bg-primary hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg transition transform hover:scale-105">📞 Nazovi: 091 123 4567</a>
+                <a href="#usluge" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold text-lg transition">Naše Usluge</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-primary py-6">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-white text-center">
+            <div class="flex items-center justify-center space-x-3">
+                <span>📍 Adresa: Ulica 123, Zagreb</span>
+            </div>
+            <div class="flex items-center justify-center space-x-3 border-y md:border-y-0 md:border-x border-orange-400 py-4 md:py-0">
+                <span>⏰ Radno vrijeme: Pon-Pet 08-17h</span>
+            </div>
+            <div class="flex items-center justify-center space-x-3">
+                <span>✅ Garancija na sve radove</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="usluge" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black uppercase tracking-tight">Što Radimo?</h2>
+                <div class="w-20 h-1.5 bg-primary mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group" data-aos="fade-up">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">⚙️</div>
+                    <h3 class="text-xl font-bold mb-3 uppercase">Mali i Veliki Servis</h3>
+                    <p class="text-gray-600 italic">Izmjena ulja, filtera, remenja i provjera svih vitalnih tekućina vašeg vozila.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💻</div>
+                    <h3 class="text-xl font-bold mb-3 uppercase">Kompjuterska Dijagnostika</h3>
+                    <p class="text-gray-600 italic">Najmodernija oprema za brzo pronalaženje kvarova na elektronici i motoru.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🛑</div>
+                    <h3 class="text-xl font-bold mb-3 uppercase">Kočioni Sustav</h3>
+                    <p class="text-gray-600 italic">Izmjena diskova, pločica i servis čeljusti za vašu maksimalnu sigurnost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerija" class="py-20 bg-dark text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10 text-center uppercase tracking-widest">Pogled u radionu</h2>
+            <div class="splide" id="workshop-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide px-2">
+                            <img src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?q=80&w=800&auto=format&fit=crop" class="rounded-lg h-64 w-full object-cover" alt="Radiona 1">
+                        </li>
+                        <li class="splide__slide px-2">
+                            <img src="https://images.unsplash.com/photo-1632733711679-5292d77649d6?q=80&w=800&auto=format&fit=crop" class="rounded-lg h-64 w-full object-cover" alt="Radiona 2">
+                        </li>
+                        <li class="splide__slide px-2">
+                            <img src="https://images.unsplash.com/photo-1507702553912-a15641e827c8?q=80&w=800&auto=format&fit=crop" class="rounded-lg h-64 w-full object-cover" alt="Radiona 3">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="py-20 bg-white">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-4xl font-black uppercase mb-6">Trebate termin?</h2>
+                <p class="text-lg text-gray-600 mb-8 font-serif italic">"Znamo koliko vam je auto bitan. Javite se s povjerenjem i riješit ćemo kvar u najkraćem roku."</p>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-primary/10 p-3 rounded-full text-primary font-bold">📞</div>
+                        <span class="text-xl font-bold">091 123 4567</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-primary/10 p-3 rounded-full text-primary font-bold">📍</div>
+                        <span class="text-xl font-bold">Vukovarska 10, Zagreb</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl text-white">
+                <form action="#" class="space-y-4">
+                    <input type="text" placeholder="Vaše Ime" class="w-full p-4 rounded bg-gray-800 border-none focus:ring-2 focus:ring-primary">
+                    <input type="text" placeholder="Marka i model auta" class="w-full p-4 rounded bg-gray-800 border-none focus:ring-2 focus:ring-primary">
+                    <textarea placeholder="Opišite kvar" rows="4" class="w-full p-4 rounded bg-gray-800 border-none focus:ring-2 focus:ring-primary"></textarea>
+                    <button class="w-full py-4 bg-primary hover:bg-orange-600 rounded font-bold uppercase transition">Pošalji Upit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-gray-100 text-center text-gray-500 text-sm border-t">
+        <p>&copy; 2024 AUTO SERVIS [IME]. Sva prava pridržana. Izrada stranice: [Tvoje Ime]</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script>
+        AOS.init();
+        new Splide('#workshop-slider', {
+            type   : 'loop',
+            perPage: 3,
+            breakpoints: {
+                768: { perPage: 1 }
+            },
+            autoplay: true,
+        }).mount();
+    </script>
+</body>
+</html>

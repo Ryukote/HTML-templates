@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECHANIC ELITE | Snaga u Detaljima</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#ff4d00', // Burn Orange (boja trkaćih kočnica)
+                        carbon: '#080808',
+                        sheet: '#111111',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html.lenis { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+        body { font-family: 'Inter', sans-serif; background-color: #080808; }
+        .font-heavy { font-family: 'Archivo Black', sans-serif; }
+        
+        /* Kosi dizajn sekcija */
+        .slant-border {
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        }
+
+        .outline-text {
+            -webkit-text-stroke: 2px rgba(255, 77, 0, 0.15);
+            color: transparent;
+            font-size: 15vw;
+        }
+
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+    </style>
+</head>
+<body class="text-white overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 p-6 flex justify-between items-center bg-carbon/80 backdrop-blur-xl border-b border-white/5">
+        <div class="font-heavy text-2xl tracking-tighter">
+            ELITE<span class="text-accent">M</span>
+        </div>
+        <div class="flex gap-8 items-center">
+            <a href="tel:09xxxx" class="hidden sm:block text-xs font-bold tracking-[0.3em] uppercase opacity-50 hover:opacity-100 transition">Hitni prijem</a>
+            <div class="h-4 w-[1px] bg-white/20 hidden sm:block"></div>
+            <a href="#kontakt" class="font-heavy text-sm text-accent hover:line-through transition">KONTAKTIRAJ NAS</a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center relative px-6">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-heavy outline-text pointer-events-none uppercase">
+            POWER
+        </div>
+        
+        <div class="z-10 text-center" data-aos="zoom-out" data-aos-duration="1500">
+            <h1 class="font-heavy text-6xl md:text-[120px] leading-none uppercase tracking-tighter italic">
+                NEMA <br> <span class="text-accent">LIMITA.</span>
+            </h1>
+            <p class="mt-8 text-gray-500 uppercase tracking-[0.5em] text-[10px] font-bold">Vrhunski servis za vrhunska vozila</p>
+            <div class="mt-12">
+                <a href="#usluge" class="px-12 py-5 border border-accent text-accent font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all duration-500">Istraži usluge</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="usluge" class="bg-sheet py-32 slant-border">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                
+                <div class="glass-card p-12 relative overflow-hidden group" data-tilt data-aos="fade-up">
+                    <div class="absolute -right-4 -top-4 font-heavy text-8xl opacity-5 group-hover:text-accent group-hover:opacity-20 transition-all duration-700">01</div>
+                    <h3 class="font-heavy text-2xl mb-6 uppercase">Motor & Elektronika</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">Precizno podešavanje rada motora i rješavanje najkompleksnijih elektroničkih kvarova pomoću licenciranih alata.</p>
+                    <div class="w-12 h-1 bg-accent transition-all group-hover:w-full duration-500"></div>
+                </div>
+
+                <div class="glass-card p-12 relative overflow-hidden group" data-tilt data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -right-4 -top-4 font-heavy text-8xl opacity-5 group-hover:text-accent group-hover:opacity-20 transition-all duration-700">02</div>
+                    <h3 class="font-heavy text-2xl mb-6 uppercase">Brzo Održavanje</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">Ulje, kočnice, filteri i gume. Sve što Vašem autu treba za siguran put, odrađeno dok pijete kavu.</p>
+                    <div class="w-12 h-1 bg-accent transition-all group-hover:w-full duration-500"></div>
+                </div>
+
+                <div class="glass-card p-12 relative overflow-hidden group" data-tilt data-aos="fade-up" data-aos-delay="400">
+                    <div class="absolute -right-4 -top-4 font-heavy text-8xl opacity-5 group-hover:text-accent group-hover:opacity-20 transition-all duration-700">03</div>
+                    <h3 class="font-heavy text-2xl mb-6 uppercase">Specijalni Projekti</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">Priprema za tehnički, restauracije i tuning. Za one koji od svog vozila traže više od običnog transporta.</p>
+                    <div class="w-12 h-1 bg-accent transition-all group-hover:w-full duration-500"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 container mx-auto px-6">
+        <div class="flex justify-between items-end mb-16">
+            <h2 class="font-heavy text-4xl uppercase leading-none">Iz radione</h2>
+            <p class="text-accent font-bold text-xs tracking-widest uppercase italic">Svaki auto je bitan</p>
+        </div>
+
+        <div class="splide" id="elite-slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide p-2">
+                        <img src="https://images.unsplash.com/photo-1632733711679-5292d77649d6?q=80&w=800" class="grayscale hover:grayscale-0 transition-all duration-1000 h-[450px] w-full object-cover border border-white/5">
+                    </li>
+                    <li class="splide__slide p-2">
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800" class="grayscale hover:grayscale-0 transition-all duration-1000 h-[450px] w-full object-cover border border-white/5">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt" class="py-32 bg-sheet relative">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <h2 class="font-heavy text-5xl md:text-7xl uppercase mb-8 italic tracking-tighter">Naruči <br> <span class="text-accent">Servis.</span></h2>
+                <div class="space-y-4">
+                    <p class="flex items-center gap-4 text-gray-400 font-bold uppercase tracking-widest text-xs">
+                        <span class="w-8 h-[1px] bg-accent"></span> Zagreb, Hrvatska
+                    </p>
+                    <p class="flex items-center gap-4 text-gray-400 font-bold uppercase tracking-widest text-xs">
+                        <span class="w-8 h-[1px] bg-accent"></span> Pon - Pet / 08:00 - 17:00
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center md:text-right" data-aos="fade-left">
+                <a href="tel:09xxxx" class="font-heavy text-5xl md:text-8xl hover:text-accent transition duration-500 leading-none">099 <br> 123 4567</a>
+                <p class="mt-12 text-gray-600 font-bold text-[10px] tracking-[0.5em] uppercase">Klikni za poziv i rezerviraj svoj termin</p>
+            </div>
+        </div>
+        
+        <div class="mt-32 text-center text-gray-800 font-bold text-[9px] uppercase tracking-[1.5em] border-t border-white/5 pt-10">
+            &copy; 2026 MECHANIC ELITE | SVA PRAVA PRIDRŽANA
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <script>
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        AOS.init({ duration: 1200, once: true });
+
+        new Splide('#elite-slider', {
+            type: 'loop',
+            perPage: 2,
+            gap: '1.5rem',
+            autoplay: true,
+            breakpoints: { 768: { perPage: 1 } }
+        }).mount();
+
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 8,
+            speed: 600,
+            glare: true,
+            "max-glare": 0.15
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANTORINI HAIR | Nova Perspektiva</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        softPink: '#fdf3f0',
+                        ink: '#121212',
+                        gold: '#b8966b',
+                    },
+                    fontFamily: {
+                        display: ['Tenor Sans', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Horizontalna Magija */
+        .horizontal-container {
+            display: flex;
+            width: 500vw; /* Povećano na 5 sekcija */
+            height: 100vh;
+            will-change: transform;
+        }
+
+        .section-slide {
+            width: 100vw;
+            height: 100vh;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5vw;
+            position: relative;
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        .image-reveal {
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        .aos-animate .image-reveal { clip-path: inset(0 0 0 0); }
+
+        /* Custom Scroll Indicator */
+        .progress-bar {
+            position: fixed;
+            bottom: 40px;
+            left: 5vw;
+            width: 90vw;
+            height: 2px;
+            background: rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #b8966b;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* Map Styling to blend with Santorini theme */
+        .map-frame {
+            filter: sepia(20%) contrast(90%) brightness(95%);
+            border-radius: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-softPink text-ink antialiased overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 p-10 flex justify-between items-center pointer-events-none">
+        <div class="text-2xl font-display tracking-[0.3em] uppercase pointer-events-auto">Santorini</div>
+        <div class="hidden md:block text-[10px] tracking-[0.5em] uppercase font-bold pointer-events-auto">Pomaknite se desno &rarr;</div>
+    </nav>
+
+    <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+
+    <main class="horizontal-container" id="main-content">
+
+        <section class="section-slide">
+            <div class="grid grid-cols-12 w-full items-center">
+                <div class="col-span-1 hidden md:block">
+                    <p class="vertical-text text-[10px] tracking-[0.8em] uppercase font-bold opacity-30">ZAGREB • EST. 2012</p>
+                </div>
+                <div class="col-span-12 md:col-span-6" data-aos="fade-up">
+                    <h1 class="font-display text-7xl md:text-[10vw] leading-none mb-8">Pure <br> <span class="italic text-gold font-light">Beauty.</span></h1>
+                    <p class="max-w-sm text-sm tracking-[0.2em] leading-loose opacity-60 uppercase font-medium">Ekskluzivno iskustvo njege kose u srcu grada. Vaša transformacija počinje ovdje.</p>
+                </div>
+                <div class="col-span-5 hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1000" class="image-reveal w-full h-[75vh] object-cover shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-slide bg-white">
+            <div class="grid grid-cols-12 w-full gap-20 items-center">
+                <div class="col-span-12 md:col-span-5">
+                    <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=1000" class="w-full h-[65vh] object-cover rounded-full p-4 border border-gold/30 shadow-inner">
+                </div>
+                <div class="col-span-12 md:col-span-7">
+                    <h2 class="font-display text-5xl md:text-8xl mb-12">Ritual <br> <span class="italic font-light">Ugađanja</span></h2>
+                    <div class="grid grid-cols-2 gap-12">
+                        <div>
+                            <p class="text-gold font-bold mb-4 tracking-widest text-xs uppercase">01. Savjetovanje</p>
+                            <p class="text-sm leading-relaxed opacity-60 font-medium">Naši stilisti pristupaju Vašoj kosi kao platnu. Svaki termin počinje detaljnom analizom i vizijom.</p>
+                        </div>
+                        <div>
+                            <p class="text-gold font-bold mb-4 tracking-widest text-xs uppercase">02. Izvedba</p>
+                            <p class="text-sm leading-relaxed opacity-60 font-medium">Koristeći prestižne brandove poput Kerastasea, stvaramo boju i oblik koji traju sedmicama.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-slide">
+            <div class="max-w-4xl w-full">
+                <h2 class="font-display text-7xl text-center mb-24 italic font-light">Cjenik Ritual</h2>
+                <div class="space-y-10">
+                    <div class="flex justify-between border-b border-black/10 pb-6 items-center group cursor-pointer">
+                        <div>
+                            <span class="text-3xl font-display group-hover:text-gold transition-all duration-500">Master Tailored Cut</span>
+                            <p class="text-[10px] uppercase tracking-widest opacity-40 mt-2">Šišanje, njega i stiliziranje</p>
+                        </div>
+                        <span class="font-bold text-xl">45€</span>
+                    </div>
+                    <div class="flex justify-between border-b border-black/10 pb-6 items-center group cursor-pointer">
+                        <div>
+                            <span class="text-3xl font-display group-hover:text-gold transition-all duration-500">Santorini Signature Glow</span>
+                            <p class="text-[10px] uppercase tracking-widest opacity-40 mt-2">Balayage tehnika s preljevom</p>
+                        </div>
+                        <span class="font-bold text-xl">95€</span>
+                    </div>
+                    <div class="flex justify-between border-b border-black/10 pb-6 items-center group cursor-pointer">
+                        <div>
+                            <span class="text-3xl font-display group-hover:text-gold transition-all duration-500">Silk Infusion Treatment</span>
+                            <p class="text-[10px] uppercase tracking-widest opacity-40 mt-2">Dubinska rekonstrukcija vlasi</p>
+                        </div>
+                        <span class="font-bold text-xl">35€</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-slide bg-white/50">
+            <div class="grid grid-cols-12 w-full h-full items-center gap-16">
+                <div class="col-span-12 md:col-span-5 flex flex-col justify-center">
+                    <h2 class="font-display text-6xl mb-8 italic">Pronađite <br> Mir.</h2>
+                    <div class="space-y-6 mb-12">
+                        <p class="text-xs tracking-[0.3em] font-bold text-gold uppercase underline underline-offset-8">Lokacija Zagreb</p>
+                        <p class="text-2xl font-display">Ilica 210, 10000 Zagreb</p>
+                        <p class="text-sm opacity-60 font-medium leading-loose">Nalazimo se u mirnom dvorištu koje osigurava privatnost i potpuni odmak od gradske buke dok kreiramo Vaš novi look.</p>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-7 h-[70vh] relative">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.166417793574!2d15.9463!3d45.8131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6f8f8f8f8f8%3A0x123456789!2zSWxpY2EgMjEwLCAxMDAwMCwgWmFncmVi!5e0!3m2!1shr!2shr!4v1625000000000!5m2!1shr!2shr" 
+                        class="w-full h-full map-frame shadow-2xl border-none" 
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-slide bg-ink text-white">
+            <div class="text-center">
+                <p class="text-[10px] tracking-[0.5em] uppercase font-bold text-gold mb-10" data-aos="fade-up">Zakažite Vaš termin</p>
+                <h2 class="font-display text-[10vw] leading-none mb-10 text-white italic font-light" data-aos="fade-up" data-aos-delay="100">Book.</h2>
+                <a href="tel:0917778888" class="text-5xl md:text-7xl font-light hover:text-gold transition-all duration-700 tracking-tighter" data-aos="fade-up" data-aos-delay="200">091 777 8888</a>
+                <div class="mt-24 flex justify-center gap-20 uppercase text-[9px] tracking-[0.5em] font-bold opacity-40">
+                    <a href="#" class="hover:text-gold transition">Instagram</a>
+                    <a href="#" class="hover:text-gold transition">Facebook</a>
+                    <p>Mon - Sat 08:00 - 20:00</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const sections = gsap.utils.toArray(".section-slide");
+        
+        // Glavna Horizontalna Animacija
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".horizontal-container",
+                pin: true,
+                scrub: 1,
+                // Dužina scrolla ovisi o broju sekcija
+                end: () => "+=" + document.querySelector(".horizontal-container").offsetWidth,
+                onUpdate: (self) => {
+                    document.getElementById("progress").style.width = (self.progress * 100) + "%";
+                }
+            }
+        });
+
+        // Lenis Smooth Scroll Setup
+        const lenis = new Lenis();
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+
+        // Inicijalizacija animacija pri ulasku u ekran
+        AOS.init({ 
+            duration: 1200, 
+            once: false,
+            mirror: true 
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Auto Centar | Vaš partner na cesti</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#0A58CA',
+                        brandLight: '#F0F4F8',
+                    },
+                    fontFamily: { sans: ['Montserrat', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tight text-brandBlue">
+                PREMIUM<span class="text-slate-400 font-light">AUTO</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#usluge" class="hover:text-brandBlue transition">Usluge</a>
+                <a href="#proces" class="hover:text-brandBlue transition">Kako radimo</a>
+                <a href="#kontakt" class="bg-brandBlue text-white px-6 py-2 rounded-full hover:shadow-lg transition">Naručite se</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative py-20 lg:py-32 overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 z-10" data-aos="fade-up">
+                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-tight mb-6">
+                    Vrhunska usluga za <span class="text-brandBlue">vaše vozilo.</span>
+                </h1>
+                <p class="text-xl text-slate-600 mb-10 max-w-lg">
+                    Specijalizirani smo za održavanje i dijagnostiku modernih vozila uz korištenje najnaprednije tehnologije.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:09xxxx" class="bg-brandBlue text-white text-center px-8 py-4 rounded-xl font-bold shadow-xl hover:bg-blue-700 transition">📞 Nazovite nas</a>
+                    <div class="flex items-center gap-3 px-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold">✓</div>
+                        <span class="text-sm font-medium">Slobodni termini <br>ovaj tjedan</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 mt-16 lg:mt-0 relative" data-aos="zoom-in">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-brandBlue/5 rounded-full blur-3xl"></div>
+                <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?q=80&w=800&auto=format&fit=crop" 
+                     alt="Moderni servis" class="rounded-3xl shadow-2xl relative z-10">
+            </div>
+        </div>
+    </section>
+
+    <section id="usluge" class="py-24 bg-brandLight rounded-[3rem] mx-4">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold mb-4">Naše usluge</h2>
+                <p class="text-slate-500">Pružamo kompletan spektar usluga održavanja kako bi vaš automobil ostao pouzdan i siguran.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <div class="text-brandBlue mb-4 font-black text-xl italic underline decoration-brandBlue/30">01.</div>
+                    <h3 class="font-bold mb-2">Redovni Servis</h3>
+                    <p class="text-sm text-slate-500">Promjena ulja i filtera prema specifikacijama proizvođača.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition border border-gray-100 text-brandBlue bg-brandBlue text-white">
+                    <div class="mb-4 font-black text-xl italic underline decoration-white/30">02.</div>
+                    <h3 class="font-bold mb-2 text-white">Elektronika</h3>
+                    <p class="text-sm opacity-90">Napredno kodiranje i rješavanje najkompliciranijih kvarova.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <div class="text-brandBlue mb-4 font-black text-xl italic underline decoration-brandBlue/30">03.</div>
+                    <h3 class="font-bold mb-2 text-brandBlue">Klima Uređaj</h3>
+                    <p class="text-sm text-slate-500">Dezinfekcija i punjenje klima uređaja novim plinom.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <div class="text-brandBlue mb-4 font-black text-xl italic underline decoration-brandBlue/30">04.</div>
+                    <h3 class="font-bold mb-2">Ovjes i Kočnice</h3>
+                    <p class="text-sm text-slate-500">Precizna kontrola i izmjena vitalnih dijelova sigurnosti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proces" class="py-24">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-black mb-8">Zašto odabrati <br>naš centar?</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 shrink-0 bg-blue-50 flex items-center justify-center rounded-lg text-brandBlue">★</div>
+                        <div>
+                            <h4 class="font-bold uppercase text-sm">Transparentnost</h4>
+                            <p class="text-slate-500 text-sm">Nema skrivenih troškova. Svaki popravak se dogovara s klijentom unaprijed.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 shrink-0 bg-blue-50 flex items-center justify-center rounded-lg text-brandBlue">★</div>
+                        <div>
+                            <h4 class="font-bold uppercase text-sm">Moderna Tehnologija</h4>
+                            <p class="text-slate-500 text-sm">Koristimo najnovije alate za dijagnostiku marke Bosch i Autel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-slate-100 h-64 rounded-3xl overflow-hidden shadow-inner">
+                    <img src="https://images.unsplash.com/photo-1517524008436-bbdb53c50039?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+                <div class="bg-slate-100 h-64 rounded-3xl overflow-hidden mt-8 shadow-inner">
+                    <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="container mx-auto px-6 mb-20">
+        <div class="bg-brandBlue p-12 lg:p-20 rounded-[3rem] text-white text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-4xl lg:text-6xl font-black mb-6 italic uppercase tracking-tighter">Spremni za put?</h2>
+                <p class="text-xl opacity-80 mb-10">Osigurajte termin za svoj automobil u par sekundi.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                    <div class="text-left">
+                        <p class="text-xs uppercase opacity-70">Radno vrijeme:</p>
+                        <p class="font-bold">Pon - Pet: 08:00 - 16:00</p>
+                    </div>
+                    <div class="w-px h-10 bg-white/20 hidden md:block"></div>
+                    <a href="tel:012345678" class="bg-white text-brandBlue px-10 py-5 rounded-2xl font-black text-2xl hover:scale-105 transition shadow-2xl">
+                        01 / 2345 - 678
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-gray-100">
+        <p class="text-slate-400 text-xs tracking-widest uppercase">Premium Auto &copy; 2024. Stranica izrađena za 100€.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>

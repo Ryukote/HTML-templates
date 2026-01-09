@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA STUDIO | Premium Hair Experience</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkCanvas: '#0d0d0d',
+                        highlight: '#c5a47e', // Zlatna boja šampanjca
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        html.lenis { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+        body { background: #0d0d0d; color: #f5f5f5; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        /* Navbar Blur */
+        .nav-blur { background: rgba(13, 13, 13, 0.8); backdrop-filter: blur(15px); }
+
+        /* Kartice Usluga */
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            background: #1a1a1a;
+            height: 480px;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .grid-item:hover { transform: scale(1.02); }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) brightness(0.6);
+            transition: filter 0.8s ease, transform 0.8s ease;
+        }
+
+        .grid-item:hover img {
+            filter: grayscale(0%) brightness(0.9);
+            transform: scale(1.1);
+        }
+
+        /* Uvijek vidljiv tekst na karticama */
+        .item-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2.5rem;
+            pointer-events: none;
+        }
+
+        .highlight-line {
+            width: 40px;
+            height: 2px;
+            background: #c5a47e;
+            margin-bottom: 1rem;
+            transition: width 0.5s ease;
+        }
+        .grid-item:hover .highlight-line { width: 100%; }
+
+        /* Dark Mode Google Maps */
+        .map-container iframe {
+            filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-50 p-6 flex justify-between items-center nav-blur border-b border-white/5">
+        <div class="font-display italic text-3xl font-bold tracking-widest text-highlight">AURA.</div>
+        <div class="flex gap-6 items-center">
+            <a href="#services" class="hidden md:block text-[10px] font-bold uppercase tracking-[0.3em] hover:text-highlight transition">Usluge</a>
+            <a href="#lokacija" class="hidden md:block text-[10px] font-bold uppercase tracking-[0.3em] hover:text-highlight transition">Lokacija</a>
+            <a href="tel:091234567" class="bg-highlight text-black px-8 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-all">Rezerviraj</a>
+        </div>
+    </nav>
+
+    <header class="min-h-screen flex items-center justify-center relative px-6 text-center overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1500')] bg-cover bg-center opacity-10 scale-110"></div>
+        <div class="relative z-10" data-aos="fade-up" data-aos-duration="2000">
+            <h4 class="text-highlight font-bold uppercase tracking-[0.5em] text-[10px] mb-6">Established 2026</h4>
+            <h1 class="font-display text-7xl md:text-9xl leading-none mb-8">
+                Čista <br> <span class="italic text-highlight font-light underline decoration-1 underline-offset-8">Elegancija.</span>
+            </h1>
+            <p class="max-w-xl mx-auto text-neutral-400 text-lg font-light leading-relaxed">
+                Vaša kosa zaslužuje više od običnog šišanja. Aura Studio je mjesto gdje se spajaju visoka moda i vrhunska njega.
+            </p>
+            <div class="mt-12">
+                <a href="#services" class="text-xs font-bold uppercase tracking-[0.4em] border-b-2 border-highlight pb-2 hover:text-highlight transition">Istražite Usluge</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-32 bg-[#0a0a0a]">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="grid-item" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800" alt="Šišanje">
+                    <div class="item-overlay">
+                        <div class="highlight-line"></div>
+                        <h3 class="font-display text-3xl mb-2 italic text-white">Signature Cut</h3>
+                        <p class="text-neutral-400 text-sm">Precizno šišanje prilagođeno obliku lica.</p>
+                    </div>
+                </div>
+
+                <div class="grid-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800" alt="Bojanje">
+                    <div class="item-overlay">
+                        <div class="highlight-line"></div>
+                        <h3 class="font-display text-3xl mb-2 italic text-white">Balayage Art</h3>
+                        <p class="text-neutral-400 text-sm">Umjetnost sjenčanja za prirodan sjaj kose.</p>
+                    </div>
+                </div>
+
+                <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=800" alt="Tretmani">
+                    <div class="item-overlay">
+                        <div class="highlight-line"></div>
+                        <h3 class="font-display text-3xl mb-2 italic text-white">Hair Therapy</h3>
+                        <p class="text-neutral-400 text-sm">Dubinska regeneracija najkvalitetnijim serumima.</p>
+                    </div>
+                </div>
+
+                <div class="grid-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f8717368?q=80&w=800" alt="Svečane frizure">
+                    <div class="item-overlay">
+                        <div class="highlight-line"></div>
+                        <h3 class="font-display text-3xl mb-2 italic text-white">Glam Styling</h3>
+                        <p class="text-neutral-400 text-sm">Svečane frizure za vjenčanja i evente.</p>
+                    </div>
+                </div>
+
+                <div class="grid-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800" alt="Muški frizer">
+                    <div class="item-overlay">
+                        <div class="highlight-line"></div>
+                        <h3 class="font-display text-3xl mb-2 italic text-white">Men's Classic</h3>
+                        <p class="text-neutral-400 text-sm">Grooming i šišanje za modernog muškarca.</p>
+                    </div>
+                </div>
+
+                <div class="grid-item" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1527799822367-a28867010252?q=80&w=800" alt="Feniranje">
+                    <div class="item-overlay">
+                        <div class="highlight-line"></div>
+                        <h3 class="font-display text-3xl mb-2 italic text-white">Silk Blowout</h3>
+                        <p class="text-neutral-400 text-sm">Profesionalno feniranje za volumen i sjaj.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="lokacija" class="py-32 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                
+                <div class="lg:w-1/3" data-aos="fade-right">
+                    <h2 class="font-display text-6xl mb-8 italic">Gdje smo <br> <span class="text-highlight">skriveni?</span></h2>
+                    <p class="text-neutral-500 mb-10 leading-relaxed">
+                        Pronađite nas u samom centru Zagreba. Naš studio je oaza mira usred gradske vreve.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-highlight font-bold uppercase text-[10px] tracking-[0.3em] mb-2">Adresa</h4>
+                            <p class="text-xl font-display italic">Ilica 202, 10000 Zagreb</p>
+                        </div>
+                        <div>
+                            <h4 class="text-highlight font-bold uppercase text-[10px] tracking-[0.3em] mb-2">Kontakt</h4>
+                            <p class="text-xl font-display italic">091 123 4567</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-2/3 w-full h-[550px] rounded-[3rem] overflow-hidden border border-white/10 map-container shadow-2xl" data-aos="zoom-in">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.1666666666665!2d15.972222222222221!3d45.81305555555555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6a2f0000001%3A0x7d0a29430803!2sIlica%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1700000000000!5m2!1shr!2shr" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/5 bg-[#0a0a0a]">
+        <div class="font-display italic text-4xl font-bold tracking-widest text-highlight mb-8">AURA.</div>
+        <div class="flex justify-center gap-10 text-[10px] font-bold uppercase tracking-[0.3em] text-neutral-600 mb-12">
+            <a href="#" class="hover:text-highlight transition">Instagram</a>
+            <a href="#" class="hover:text-highlight transition">Facebook</a>
+            <a href="#" class="hover:text-highlight transition">Pinterest</a>
+        </div>
+        <p class="text-[9px] text-neutral-800 uppercase tracking-[1em]">&copy; 2026 Aura Studio Management</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Smooth Scroll (Lenis)
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // AOS Animations
+        AOS.init({
+            duration: 1200,
+            once: true,
+            offset: 100
+        });
+
+        // Event listener za linkove (da rade glatko s Lenisom)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                lenis.scrollTo(this.getAttribute('href'));
+            });
+        });
+    </script>
+</body>
+</html>
