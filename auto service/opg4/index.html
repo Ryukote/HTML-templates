@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITALIA | Arhitektura Okusa</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { 
+            background: #0f1412; 
+            color: #e2e8f0; 
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .product-image-container {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            transition: clip-path 0.6s ease;
+        }
+
+        .float-card.active .product-image-container {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .details-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        .float-card.active .details-panel {
+            max-height: 300px;
+            padding-top: 1.5rem;
+            opacity: 1;
+        }
+
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+            gap: 2rem;
+            background: #88b04b;
+            color: #0f1412;
+            padding: 1rem 0;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .marquee div {
+            animation: marquee 20s linear infinite;
+            display: flex;
+            gap: 2rem;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .gallery-track {
+            display: flex;
+            width: max-content;
+            animation: scrollGallery 40s linear infinite;
+            gap: 1.5rem;
+        }
+
+        @keyframes scrollGallery {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .gallery-item {
+            width: 350px;
+            height: 500px;
+            flex-shrink: 0;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            filter: grayscale(40%);
+            transition: all 0.5s ease;
+        }
+        
+        .gallery-item:hover {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+
+        /* POSEBAN STIL ZA MOBILNI KONTAKT GUMB */
+        @media (max-width: 768px) {
+            .mobile-nav-btn {
+                padding: 1.2rem 2.5rem !important; /* Puno veći gumb */
+                font-size: 0.9rem !important;
+                box-shadow: 0 10px 30px rgba(136, 176, 75, 0.3);
+                border: 2px solid #88b04b;
+            }
+        }
+
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        img { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-[100] px-6 py-6 md:py-8 flex justify-between items-center bg-gradient-to-b from-[#0f1412] via-[#0f1412]/80 to-transparent backdrop-blur-sm md:backdrop-blur-none">
+        <div class="text-2xl font-black tracking-tighter uppercase">Vitalia<span class="text-[#88b04b]">©</span></div>
+        <a href="tel:0911234567" class="mobile-nav-btn bg-[#88b04b] text-[#0f1412] md:bg-white md:text-black px-8 py-3 rounded-full text-xs font-black uppercase tracking-tighter hover:bg-[#88b04b] hover:text-[#0f1412] transition-all transform active:scale-95 shadow-xl">
+            Pozovi: 091 123 4567
+        </a>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-end px-6 pb-20">
+        <div class="max-w-7xl mx-auto w-full">
+            <h1 class="text-[12vw] leading-[0.8] font-black uppercase tracking-tighter mb-8" data-aos="fade-up">
+                Fresh <br> <span class="text-transparent" style="-webkit-text-stroke: 1px white;">Radical</span> <br> <span class="text-[#88b04b]">Local.</span>
+            </h1>
+            <p class="max-w-md text-lg opacity-50 mb-10" data-aos="fade-up" data-aos-delay="200">
+                Redefiniramo način na koji doživljavate domaću hranu. Izravno s našeg polja u Zagrebu na vaš stol.
+            </p>
+        </div>
+    </section>
+
+    <div class="marquee font-black">
+        <div>
+            <span>Dostava Utorkom i Petkom •</span> <span>Bez Pesticida •</span> <span>100% Organski Uzgoj •</span> <span>OPG Vitalia Zagreb •</span>
+            <span>Dostava Utorkom i Petkom •</span> <span>Bez Pesticida •</span> <span>100% Organski Uzgoj •</span> <span>OPG Vitalia Zagreb •</span>
+        </div>
+    </div>
+
+    <section id="ponuda" class="py-40 px-6 bg-[#161b19]">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="float-card glass-card p-4 rounded-[2rem]" data-aos="fade-up">
+                    <div class="product-image-container h-[400px] rounded-[1.5rem] overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?q=80&w=800" alt="Bobice">
+                    </div>
+                    <div class="px-4 pb-4">
+                        <div class="flex justify-between items-end mb-6">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-[#88b04b] font-bold mb-1 text-left">Sezonski</p>
+                                <h3 class="text-3xl font-black uppercase tracking-tighter">Bobice</h3>
+                            </div>
+                            <span class="text-2xl font-light">4.50€</span>
+                        </div>
+                        <button onclick="toggleDetails(this)" class="w-full py-4 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition">
+                            Pregled Cijena
+                        </button>
+                        <div class="details-panel">
+                            <div class="space-y-4">
+                                <div class="flex justify-between border-b border-white/5 pb-2"><span>Pakiranje 250g</span><span class="text-[#88b04b]">4,50 €</span></div>
+                                <div class="flex justify-between border-b border-white/5 pb-2"><span>Pakiranje 500g</span><span class="text-[#88b04b]">8,00 €</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="float-card glass-card p-4 rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-image-container h-[400px] rounded-[1.5rem] overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=800" alt="Rajčica">
+                    </div>
+                    <div class="px-4 pb-4">
+                        <div class="flex justify-between items-end mb-6 text-left">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-[#88b04b] font-bold mb-1">Mlado</p>
+                                <h3 class="text-3xl font-black uppercase tracking-tighter">Rajčica</h3>
+                            </div>
+                            <span class="text-2xl font-light">3.50€</span>
+                        </div>
+                        <button onclick="toggleDetails(this)" class="w-full py-4 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition">
+                            Pregled Cijena
+                        </button>
+                        <div class="details-panel">
+                            <div class="space-y-4">
+                                <div class="flex justify-between border-b border-white/5 pb-2"><span>Cijena po kg</span><span class="text-[#88b04b]">3,50 €</span></div>
+                                <div class="flex justify-between border-b border-white/5 pb-2"><span>Gajba (5kg+)</span><span class="text-[#88b04b]">3,00 €/kg</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="float-card glass-card p-4 rounded-[2rem]" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image-container h-[400px] rounded-[1.5rem] overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=800" alt="Med">
+                    </div>
+                    <div class="px-4 pb-4 text-left">
+                        <div class="flex justify-between items-end mb-6">
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-[#88b04b] font-bold mb-1">Prirodni</p>
+                                <h3 class="text-3xl font-black uppercase tracking-tighter">Med</h3>
+                            </div>
+                            <span class="text-2xl font-light">9.00€</span>
+                        </div>
+                        <button onclick="toggleDetails(this)" class="w-full py-4 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition">
+                            Pregled Cijena
+                        </button>
+                        <div class="details-panel">
+                            <div class="space-y-4">
+                                <div class="flex justify-between border-b border-white/5 pb-2"><span>Tegla 450g</span><span class="text-[#88b04b]">6,00 €</span></div>
+                                <div class="flex justify-between border-b border-white/5 pb-2"><span>Tegla 900g</span><span class="text-[#88b04b]">11,00 €</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-[#0f1412] overflow-hidden">
+        <div class="px-6 mb-12 max-w-7xl mx-auto">
+            <h2 class="text-5xl font-black uppercase tracking-tighter" data-aos="fade-right">Život na imanju</h2>
+        </div>
+        <div class="gallery-track">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?q=80&w=800"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=800"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?q=80&w=800"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?q=80&w=800"></div>
+        </div>
+    </section>
+
+    <section class="py-40 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="text-left">
+                <h2 class="text-7xl font-black uppercase tracking-tighter mb-12">Pronađi <br>nas.</h2>
+                <p class="text-xl opacity-50 mb-6">Cvjetna ulica 88, 10000 Zagreb</p>
+                <a href="tel:0911234567" class="text-5xl font-black text-[#88b04b] hover:text-white transition italic underline">091 123 4567</a>
+            </div>
+            <div class="h-[500px] rounded-[3rem] overflow-hidden border border-white/10">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.7890486001093!2d15.978!3d45.815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6a27e748897%3A0xe54e95456f91662a!2sZagreb!5e0!3m2!1shr!2shr!4v1700000000000!5m2!1shr!2shr" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="p-10 border-t border-white/5 text-center text-[10px] font-bold uppercase tracking-[0.5em] opacity-20">
+        © 2026 Vitalia System Original
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ duration: 1000, once: true });
+            const lenis = new Lenis();
+            function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+            requestAnimationFrame(raf);
+        });
+
+        function toggleDetails(button) {
+            const card = button.closest('.float-card');
+            card.classList.toggle('active');
+            button.innerText = card.classList.contains('active') ? 'Zatvori' : 'Pregled Cijena';
+        }
+    </script>
+</body>
+</html>

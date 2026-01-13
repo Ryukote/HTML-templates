@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>VITALIA | Lokalna Hrana</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Lenis (smooth scroll, ultra light) -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f6f5f2;
+    color: #1a1a1a;
+}
+
+/* ===== PERFORMANCE ANIMATIONS ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform .7s ease, opacity .7s ease;
+    will-change: transform, opacity;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* hover lift – minimal repaint */
+.card {
+    transition: transform .35s ease;
+    will-change: transform;
+}
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.img-wrap img {
+    transition: transform .6s ease;
+    will-change: transform;
+}
+.img-wrap:hover img {
+    transform: scale(1.05);
+}
+
+.price-tag {
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-[#f6f5f2] border-b border-black/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-black">VITALIA<span class="text-[#88b04b]">.</span></div>
+        <a href="tel:0911234567"
+           class="bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-[#88b04b] transition">
+           091 123 4567
+        </a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center reveal">
+    <div>
+        <h1 class="text-6xl md:text-8xl font-black leading-[0.9] mb-8">
+            HRANA<br>KOJOJ<br>VJERUJEŠ
+        </h1>
+        <p class="text-lg opacity-70 max-w-md mb-10">
+            Bez skladišta. Bez posrednika. Direktno s polja.
+        </p>
+        <a href="#ponuda"
+           class="inline-block border-2 border-black px-8 py-4 font-bold uppercase tracking-widest hover:bg-black hover:text-white transition">
+           Pogledaj ponudu
+        </a>
+    </div>
+
+    <div class="aspect-[4/5] overflow-hidden rounded-xl img-wrap">
+        <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?q=80&w=1200"
+             class="w-full h-full object-cover">
+    </div>
+</section>
+
+<!-- INFO STRIP -->
+<section class="bg-black text-white py-4">
+    <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-between gap-4 text-xs font-bold uppercase tracking-widest">
+        <span>Dostava utorkom i petkom</span>
+        <span>Bez pesticida</span>
+        <span>100% lokalno</span>
+        <span>OPG Vitalia Zagreb</span>
+    </div>
+</section>
+
+<!-- PONUDA -->
+<section id="ponuda" class="max-w-7xl mx-auto px-6 py-32">
+    <h2 class="text-5xl md:text-7xl font-black mb-20 reveal">TRENUTNA<br>PONUDA</h2>
+
+    <div class="grid md:grid-cols-3 gap-12">
+
+        <!-- Bobice -->
+        <div class="border-2 border-black p-6 card reveal">
+            <div class="img-wrap mb-6">
+                <img src="https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?q=80&w=800"
+                     class="h-56 w-full object-cover">
+            </div>
+            <div class="flex justify-between mb-4">
+                <h3 class="text-3xl font-black">Bobice</h3>
+                <span class="bg-[#88b04b] px-4 py-2 font-black price-tag">4.50€</span>
+            </div>
+            <ul class="text-sm space-y-2">
+                <li class="flex justify-between"><span>250g</span><span>4,50 €</span></li>
+                <li class="flex justify-between"><span>500g</span><span>8,00 €</span></li>
+            </ul>
+        </div>
+
+        <!-- Rajčica -->
+        <div class="border-2 border-black p-6 card reveal">
+            <div class="img-wrap mb-6">
+                <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=800"
+                     class="h-56 w-full object-cover">
+            </div>
+            <div class="flex justify-between mb-4">
+                <h3 class="text-3xl font-black">Rajčica</h3>
+                <span class="bg-[#88b04b] px-4 py-2 font-black price-tag">3.50€</span>
+            </div>
+            <ul class="text-sm space-y-2">
+                <li class="flex justify-between"><span>kg</span><span>3,50 €</span></li>
+                <li class="flex justify-between"><span>5kg+</span><span>3,00 €/kg</span></li>
+            </ul>
+        </div>
+
+        <!-- Med -->
+        <div class="border-2 border-black p-6 card reveal">
+            <div class="img-wrap mb-6">
+                <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=800"
+                     class="h-56 w-full object-cover">
+            </div>
+            <div class="flex justify-between mb-4">
+                <h3 class="text-3xl font-black">Med</h3>
+                <span class="bg-[#88b04b] px-4 py-2 font-black price-tag">9.00€</span>
+            </div>
+            <ul class="text-sm space-y-2">
+                <li class="flex justify-between"><span>450g</span><span>6,00 €</span></li>
+                <li class="flex justify-between"><span>900g</span><span>11,00 €</span></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- MAP -->
+<section class="border-t border-black/10">
+    <div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center reveal">
+        <div>
+            <h2 class="text-6xl font-black mb-10">GDJE SMO</h2>
+            <p class="text-lg opacity-70 mb-4">Cvjetna ulica 88, Zagreb</p>
+            <a href="tel:0911234567"
+               class="text-4xl font-black text-[#88b04b] hover:underline">
+               091 123 4567
+            </a>
+        </div>
+
+        <div class="h-[400px] border-2 border-black overflow-hidden">
+            <iframe
+                src="https://www.google.com/maps?q=Cvjetna%20cesta%2088%20Zagreb&output=embed"
+                width="100%" height="100%" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center py-10 text-xs uppercase tracking-widest opacity-40">
+© 2026 OPG Vitalia
+</footer>
+
+<script>
+/* Smooth scroll – minimal overhead */
+const lenis = new Lenis({ smoothWheel: true });
+function raf(time){ lenis.raf(time); requestAnimationFrame(raf); }
+requestAnimationFrame(raf);
+
+/* IntersectionObserver – 1 instance */
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+},{ threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

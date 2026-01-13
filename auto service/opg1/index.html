@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPG MODERNA | Čista Priroda</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nature: '#2d3a2e', 
+                        earth: '#fdfaf5',  
+                        clay: '#a67c52',   
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        html.lenis { height: auto; }
+        body { background: #fdfaf5; color: #2d3a2e; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        .sticky-side { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+        .scroll-side { padding: 4rem 1.5rem; }
+        
+        @media (max-width: 1024px) {
+            .sticky-side { position: relative; height: 40vh; }
+            .scroll-side { padding: 2rem 1rem; }
+        }
+
+        .product-row {
+            border-bottom: 1px solid rgba(45, 58, 46, 0.1);
+            transition: all 0.3s ease;
+        }
+        .product-row:hover {
+            background: rgba(166, 124, 82, 0.05);
+            padding-left: 10px;
+        }
+
+        .paper-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+    </style>
+</head>
+<body class="paper-texture">
+
+    <nav class="fixed top-0 left-0 w-full z-[100] p-6 flex justify-between items-center mix-blend-multiply">
+        <div class="font-bold text-xl tracking-tighter uppercase italic">OPG<span class="text-clay">.</span>MODERNA</div>
+        <a href="#ponuda" class="bg-nature text-earth px-6 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-clay transition-all">Pogledaj ponudu</a>
+    </nav>
+
+    <div class="flex flex-col lg:flex-row min-h-screen">
+        
+        <div class="lg:w-5/12 sticky-side bg-nature">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200" 
+                 class="w-full h-full object-cover opacity-70" alt="OPG Pejzaž">
+            <div class="absolute inset-0 bg-gradient-to-t from-nature/90 via-transparent to-transparent"></div>
+            <div class="absolute bottom-10 left-10 text-earth" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl leading-tight">Zemlja ne laže.<br><i class="font-serif">Okus tradicije.</i></h1>
+            </div>
+        </div>
+
+        <div class="lg:w-7/12 scroll-side max-w-4xl mx-auto">
+            
+            <div class="min-h-[60vh] flex flex-col justify-center mb-32" data-aos="fade-up">
+                <span class="text-clay font-bold text-[10px] uppercase tracking-[0.4em] mb-4">Dobrodošli na imanje</span>
+                <h2 class="text-4xl md:text-5xl mb-6 italic">Prirodni uzgoj kao nekada.</h2>
+                <p class="text-lg text-nature/70 leading-relaxed">
+                    Naša obitelj generacijama obrađuje ovu zemlju. Danas koristimo moderno znanje kako bismo sačuvali stare sorte i osigurali plodove bez ikakvih kemijskih dodataka.
+                </p>
+            </div>
+
+            <div id="ponuda" class="mb-32">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl md:text-4xl italic">Iz naše smočnice</h2>
+                    <div class="h-[1px] flex-grow bg-nature/10"></div>
+                </div>
+
+                <div class="mb-12" data-aos="fade-up">
+                    <h4 class="text-clay font-bold text-[10px] uppercase tracking-[0.3em] mb-6">01. Sezonsko Povrće</h4>
+                    <div class="space-y-0">
+                        <div class="product-row py-4 flex justify-between items-center">
+                            <div>
+                                <p class="font-bold text-lg">Domaća Rajčica (Stara sorta)</p>
+                                <p class="text-[10px] text-nature/50 uppercase">Dostupno: Srpanj - Rujan</p>
+                            </div>
+                            <span class="font-serif italic text-clay">3.50 € / kg</span>
+                        </div>
+                        <div class="product-row py-4 flex justify-between items-center">
+                            <div>
+                                <p class="font-bold text-lg">Mladi Krumpir</p>
+                                <p class="text-[10px] text-nature/50 uppercase">Ručno kopan</p>
+                            </div>
+                            <span class="font-serif italic text-clay">2.00 € / kg</span>
+                        </div>
+                        <div class="product-row py-4 flex justify-between items-center">
+                            <div>
+                                <p class="font-bold text-lg">Eko Češnjak</p>
+                                <p class="text-[10px] text-nature/50 uppercase">Sušen na vjetru</p>
+                            </div>
+                            <span class="font-serif italic text-clay">10.00 € / kg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12" data-aos="fade-up">
+                    <h4 class="text-clay font-bold text-[10px] uppercase tracking-[0.3em] mb-6">02. Ulja i Delikatese</h4>
+                    <div class="space-y-0">
+                        <div class="product-row py-4 flex justify-between items-center">
+                            <div>
+                                <p class="font-bold text-lg">Ekstra Djevičansko Maslinovo Ulje</p>
+                                <p class="text-[10px] text-nature/50 uppercase">Hladno prešano / 0.2% kiselosti</p>
+                            </div>
+                            <span class="font-serif italic text-clay">16.00 € / L</span>
+                        </div>
+                        <div class="product-row py-4 flex justify-between items-center">
+                            <div>
+                                <p class="font-bold text-lg">Bagremov Med</p>
+                                <p class="text-[10px] text-nature/50 uppercase">S naših pašnjaka</p>
+                            </div>
+                            <span class="font-serif italic text-clay">12.00 € / tegla</span>
+                        </div>
+                        <div class="product-row py-4 flex justify-between items-center">
+                            <div>
+                                <p class="font-bold text-lg">Džem od Šljiva</p>
+                                <p class="text-[10px] text-nature/50 uppercase">Bez dodanog šećera</p>
+                            </div>
+                            <span class="font-serif italic text-clay">6.00 € / tegla</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-[10px] italic text-nature/40">* Ponuda ovisi o sezoni i dostupnosti plodova.</p>
+            </div>
+
+            <div class="mb-32" data-aos="fade-up">
+                <h2 class="text-3xl mb-8 italic">Pronađite nas</h2>
+                <div class="w-full h-[300px] mb-8 overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition-all duration-1000 shadow-sm border border-nature/5">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.78904351654!2d15.9772!3d45.815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDQ4JzU0LjAiTiAxNcKwNTgnMzcuOSJF!5e0!3m2!1shr!2shr!4v1625000000000!5m2!1shr!2shr" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 bg-nature text-earth p-8 rounded-3xl">
+                    <div>
+                        <p class="text-clay font-bold text-[10px] uppercase tracking-widest mb-4">Radno Vrijeme</p>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between border-b border-earth/10 pb-2">
+                                <span>Pon - Sub</span>
+                                <span class="font-bold">08:00 - 19:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Nedjelja</span>
+                                <span class="italic opacity-60">Samo uz najavu</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-clay font-bold text-[10px] uppercase tracking-widest mb-4">Lokacija</p>
+                        <p class="text-sm">Zeleni brijeg 44, <br> 10000 Zagreb, Hrvatska</p>
+                        <a href="tel:091234567" class="inline-block mt-4 text-clay font-bold hover:text-white transition-colors">Nazovi nas →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="kontakt" class="mb-20 text-center py-20 border-y border-nature/10" data-aos="zoom-in">
+                <h2 class="text-5xl mb-6 italic tracking-tighter text-clay">Naručite svježe.</h2>
+                <p class="mb-10 text-nature/60 max-w-sm mx-auto">Vršimo dostavu u krugu od 30km svakog petka. Rezervirajte svoj paket na vrijeme.</p>
+                <a href="tel:091234567" class="text-4xl md:text-5xl font-serif italic text-nature hover:text-clay transition-all">091 123 4567</a>
+                <div class="mt-6 flex justify-center gap-4">
+                    <span class="text-[9px] font-black uppercase tracking-widest px-3 py-1 bg-nature text-earth rounded">WhatsApp</span>
+                    <span class="text-[9px] font-black uppercase tracking-widest px-3 py-1 bg-nature text-earth rounded">Viber</span>
+                </div>
+            </div>
+
+            <footer class="flex justify-between text-[9px] font-black uppercase tracking-[0.2em] opacity-30 pb-10">
+                <span>© 2026 OPG MODERNA</span>
+                <span>Zagreb, HR</span>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Smooth Scroll
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        // AOS
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>

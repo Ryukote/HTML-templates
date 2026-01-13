@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>OPG Vitalia — Lokalna Hrana</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --ink:#1f2a22;
+    --olive:#88b04b;
+    --paper:#faf9f6;
+}
+
+body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+}
+
+/* editorial reveal */
+.reveal{
+    opacity:0;
+    transform:translateY(32px);
+    transition:opacity .7s ease, transform .7s ease;
+    will-change:transform,opacity;
+}
+.reveal.visible{
+    opacity:1;
+    transform:none;
+}
+
+/* image calm zoom */
+.media img{
+    transition:transform .8s ease;
+    will-change:transform;
+}
+.media:hover img{
+    transform:scale(1.04);
+}
+
+/* subtle hover */
+.card{
+    transition:transform .35s ease;
+    will-change:transform;
+}
+.card:hover{
+    transform:translateY(-6px);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-[var(--paper)] border-b border-black/10">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-wide">
+            OPG <span class="font-black">VITALIA</span>
+        </div>
+        <a href="tel:0911234567"
+           class="text-sm font-semibold border-b-2 border-[var(--ink)] hover:border-[var(--olive)] transition">
+            091 123 4567
+        </a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 gap-20 items-center reveal">
+    <div>
+        <h1 class="font-['Playfair_Display'] text-6xl md:text-7xl font-black leading-[1.05] mb-10">
+            Hrana koja<br>
+            ima porijeklo.
+        </h1>
+        <p class="text-lg max-w-md opacity-70 mb-12">
+            Uzgojena s namjerom, ubrana sezonski i dostavljena bez posrednika.
+        </p>
+        <a href="#ponuda"
+           class="inline-block bg-[var(--ink)] text-white px-10 py-4 text-sm tracking-widest uppercase hover:bg-[var(--olive)] transition">
+            Naša ponuda
+        </a>
+    </div>
+
+    <div class="media overflow-hidden rounded-lg">
+        <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?q=80&w=1200"
+             class="w-full h-full object-cover">
+    </div>
+</section>
+
+<!-- QUOTE STRIP -->
+<section class="border-y border-black/10 py-16">
+    <div class="max-w-5xl mx-auto px-6 text-center reveal">
+        <p class="font-['Playfair_Display'] text-3xl italic">
+            “Najbolja hrana je ona za koju znaš tko ju je uzgojio.”
+        </p>
+    </div>
+</section>
+
+<!-- PONUDA -->
+<section id="ponuda" class="max-w-7xl mx-auto px-6 py-32">
+    <h2 class="font-['Playfair_Display'] text-5xl font-black mb-24 reveal">
+        Sezonska ponuda
+    </h2>
+
+    <div class="space-y-24">
+
+        <!-- ITEM -->
+        <article class="grid md:grid-cols-2 gap-16 items-center card reveal">
+            <div class="media">
+                <img src="https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?q=80&w=900"
+                     class="w-full h-[360px] object-cover rounded-lg">
+            </div>
+            <div>
+                <p class="uppercase tracking-widest text-xs text-[var(--olive)] mb-4">Sezonsko</p>
+                <h3 class="font-['Playfair_Display'] text-4xl font-black mb-6">Bobice</h3>
+                <ul class="space-y-3 text-lg">
+                    <li class="flex justify-between"><span>Pakiranje 250g</span><span>4,50 €</span></li>
+                    <li class="flex justify-between"><span>Pakiranje 500g</span><span>8,00 €</span></li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ITEM -->
+        <article class="grid md:grid-cols-2 gap-16 items-center card reveal">
+            <div class="order-last md:order-first">
+                <p class="uppercase tracking-widest text-xs text-[var(--olive)] mb-4">Mlado</p>
+                <h3 class="font-['Playfair_Display'] text-4xl font-black mb-6">Rajčica</h3>
+                <ul class="space-y-3 text-lg">
+                    <li class="flex justify-between"><span>Cijena po kg</span><span>3,50 €</span></li>
+                    <li class="flex justify-between"><span>Gajba (5kg+)</span><span>3,00 €/kg</span></li>
+                </ul>
+            </div>
+            <div class="media">
+                <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=900"
+                     class="w-full h-[360px] object-cover rounded-lg">
+            </div>
+        </article>
+
+        <!-- ITEM -->
+        <article class="grid md:grid-cols-2 gap-16 items-center card reveal">
+            <div class="media">
+                <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=900"
+                     class="w-full h-[360px] object-cover rounded-lg">
+            </div>
+            <div>
+                <p class="uppercase tracking-widest text-xs text-[var(--olive)] mb-4">Premium</p>
+                <h3 class="font-['Playfair_Display'] text-4xl font-black mb-6">Med</h3>
+                <ul class="space-y-3 text-lg">
+                    <li class="flex justify-between"><span>Tegla 450g</span><span>6,00 €</span></li>
+                    <li class="flex justify-between"><span>Tegla 900g</span><span>11,00 €</span></li>
+                </ul>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- LOKACIJA -->
+<section class="border-t border-black/10">
+    <div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center reveal">
+        <div>
+            <h2 class="font-['Playfair_Display'] text-5xl font-black mb-8">Gdje smo</h2>
+            <p class="text-lg opacity-70 mb-4">Cvjetna ulica 88, Zagreb</p>
+            <a href="tel:0911234567"
+               class="text-3xl font-bold text-[var(--olive)] hover:underline">
+               091 123 4567
+            </a>
+        </div>
+
+        <div class="h-[380px] overflow-hidden rounded-lg border border-black/10">
+            <iframe
+                src="https://www.google.com/maps?q=Cvjetna%20cesta%2088%20Zagreb&output=embed"
+                width="100%" height="100%" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<footer class="py-16 text-center text-xs uppercase tracking-widest opacity-40">
+    © 2026 OPG Vitalia
+</footer>
+
+<script>
+/* reveal observer */
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+        if(e.isIntersecting){
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+        }
+    });
+},{threshold:.15});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

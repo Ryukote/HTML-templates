@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>VITALIA | Nocturne Green</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0b120e;
+    --panel:#111a14;
+    --green:#88b04b;
+    --ink:#e5efe7;
+    --muted:#9fb3a4;
+}
+
+body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+}
+
+/* reveal animation */
+.reveal{
+    opacity:0;
+    transform:translateY(36px);
+    transition:opacity .7s ease, transform .7s ease;
+    will-change:transform,opacity;
+}
+.reveal.visible{
+    opacity:1;
+    transform:none;
+}
+
+/* panels */
+.panel{
+    background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border:1px solid rgba(136,176,75,0.18);
+}
+
+/* hover lift */
+.lift{
+    transition:transform .35s ease, box-shadow .35s ease;
+    will-change:transform;
+}
+.lift:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+/* image calm zoom */
+.media img{
+    transition:transform .7s ease;
+    will-change:transform;
+}
+.media:hover img{
+    transform:scale(1.05);
+}
+
+/* price badge */
+.badge{
+    background:var(--green);
+    color:#0b120e;
+    padding:.4rem .8rem;
+    font-weight:900;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-[var(--bg)]/90 backdrop-blur border-b border-green-500/10">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <div class="text-xl font-black tracking-tight">
+            VITALIA<span class="text-[var(--green)]">©</span>
+        </div>
+        <a href="tel:0911234567"
+           class="border border-[var(--green)] text-[var(--green)] px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-[var(--green)] hover:text-black transition">
+            091 123 4567
+        </a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 gap-20 items-center reveal">
+    <div>
+        <h1 class="text-6xl md:text-8xl font-black leading-[0.9] mb-10">
+            TIHO.<br>
+            ČISTO.<br>
+            <span class="text-[var(--green)]">LOKALNO.</span>
+        </h1>
+        <p class="text-lg max-w-md text-[var(--muted)] mb-12">
+            Hrana uzgojena bez žurbe. Bez kemije. Bez kompromisa.
+        </p>
+        <a href="#ponuda"
+           class="inline-block bg-[var(--green)] text-black px-10 py-4 text-sm font-black uppercase tracking-widest hover:opacity-90 transition">
+            Istraži ponudu
+        </a>
+    </div>
+
+    <div class="media overflow-hidden rounded-xl panel">
+        <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?q=80&w=1400"
+             class="w-full h-full object-cover opacity-90">
+    </div>
+</section>
+
+<!-- SIGNAL STRIP -->
+<section class="border-y border-green-500/10">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex flex-wrap justify-between gap-6 text-xs font-bold uppercase tracking-widest text-[var(--muted)]">
+        <span>Dostava utorkom i petkom</span>
+        <span>Bez pesticida</span>
+        <span>100% lokalno</span>
+        <span>OPG Vitalia Zagreb</span>
+    </div>
+</section>
+
+<!-- PONUDA -->
+<section id="ponuda" class="max-w-7xl mx-auto px-6 py-32">
+    <h2 class="text-5xl md:text-7xl font-black mb-24 reveal">
+        SEZONSKA<br>
+        <span class="text-[var(--green)]">PONUDA</span>
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-12">
+
+        <!-- CARD -->
+        <div class="panel p-6 lift reveal">
+            <div class="media mb-6 overflow-hidden rounded-lg">
+                <img src="https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?q=80&w=900"
+                     class="h-56 w-full object-cover">
+            </div>
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-3xl font-black">Bobice</h3>
+                <span class="badge">4.50€</span>
+            </div>
+            <ul class="text-sm space-y-2 text-[var(--muted)]">
+                <li class="flex justify-between"><span>250g</span><span>4,50 €</span></li>
+                <li class="flex justify-between"><span>500g</span><span>8,00 €</span></li>
+            </ul>
+        </div>
+
+        <div class="panel p-6 lift reveal">
+            <div class="media mb-6 overflow-hidden rounded-lg">
+                <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=900"
+                     class="h-56 w-full object-cover">
+            </div>
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-3xl font-black">Rajčica</h3>
+                <span class="badge">3.50€</span>
+            </div>
+            <ul class="text-sm space-y-2 text-[var(--muted)]">
+                <li class="flex justify-between"><span>kg</span><span>3,50 €</span></li>
+                <li class="flex justify-between"><span>5kg+</span><span>3,00 €/kg</span></li>
+            </ul>
+        </div>
+
+        <div class="panel p-6 lift reveal">
+            <div class="media mb-6 overflow-hidden rounded-lg">
+                <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=900"
+                     class="h-56 w-full object-cover">
+            </div>
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-3xl font-black">Med</h3>
+                <span class="badge">9.00€</span>
+            </div>
+            <ul class="text-sm space-y-2 text-[var(--muted)]">
+                <li class="flex justify-between"><span>450g</span><span>6,00 €</span></li>
+                <li class="flex justify-between"><span>900g</span><span>11,00 €</span></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- LOKACIJA -->
+<section class="border-t border-green-500/10">
+    <div class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-20 items-center reveal">
+        <div>
+            <h2 class="text-5xl font-black mb-8">PRONAĐI NAS</h2>
+            <p class="text-lg text-[var(--muted)] mb-4">Cvjetna ulica 88, Zagreb</p>
+            <a href="tel:0911234567"
+               class="text-4xl font-black text-[var(--green)] hover:underline">
+               091 123 4567
+            </a>
+        </div>
+
+        <div class="h-[380px] panel overflow-hidden rounded-xl">
+            <iframe
+                src="https://www.google.com/maps?q=Cvjetna%20cesta%2088%20Zagreb&output=embed"
+                width="100%" height="100%" loading="lazy"
+                class="opacity-80">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<footer class="py-16 text-center text-xs uppercase tracking-widest text-[var(--muted)]">
+    © 2026 OPG Vitalia
+</footer>
+
+<script>
+/* IntersectionObserver – ultra light */
+const observer = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+        if(e.isIntersecting){
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+        }
+    });
+},{threshold:.15});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

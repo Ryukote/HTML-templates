@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPG ARHIVA | Okus Zemlje</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        truffle: '#1a1614', 
+                        gold: '#c5a358',    
+                        cream: '#f4f1ea',   
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+
+    <style>
+        html.lenis { height: auto; }
+        body { background: #f4f1ea; color: #1a1614; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(26,22,20,0) 0%, rgba(26,22,20,0.8) 100%);
+        }
+
+        /* Galerija Efekti */
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(26,22,20,0.2);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Cijene i Menu */
+        .menu-item:hover .price-tag { color: #c5a358; transform: translateX(-5px); }
+        .price-tag { transition: all 0.3s ease; }
+
+        .map-frame {
+            filter: sepia(0.3) contrast(1.1) brightness(0.9);
+            border: 8px solid white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 p-6 flex justify-between items-center transition-all duration-500" id="navbar">
+        <div class="font-serif italic text-2xl font-bold tracking-tighter">Arhiva<span class="text-gold">.</span></div>
+        <div class="flex gap-6 md:gap-8 items-center">
+            <a href="#ponuda" class="text-[9px] font-black uppercase tracking-[0.3em] hover:text-gold transition">Ponuda</a>
+            <a href="#galerija" class="text-[9px] font-black uppercase tracking-[0.3em] hover:text-gold transition">Galerija</a>
+            <a href="#kontakt" class="bg-truffle text-cream px-4 md:px-6 py-2 rounded-sm text-[9px] font-black uppercase tracking-[0.3em] hover:bg-gold transition">Kontakt</a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-end pb-20 px-6 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=2000" 
+             class="absolute inset-0 w-full h-full object-cover scale-105" alt="Vrt">
+        <div class="absolute inset-0 hero-gradient"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto w-full text-cream">
+            <span class="text-gold font-bold tracking-[0.5em] text-[10px] uppercase block mb-4" data-aos="fade-up">Zabilježeno u prirodi</span>
+            <h1 class="text-6xl md:text-8xl leading-[0.9] italic italic tracking-tighter" data-aos="fade-up" data-aos-delay="200">
+                Arhiva <br>Okusa.
+            </h1>
+        </div>
+    </section>
+
+    <section id="ponuda" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl italic mb-4">Sezonski Katalog</h2>
+                <div class="w-12 h-[2px] bg-gold mx-auto"></div>
+            </div>
+
+            <div class="space-y-16">
+                <div>
+                    <h3 class="text-lg mb-8 text-gold italic border-b border-truffle/10 pb-4">Izvrstnost Zemlje</h3>
+                    <div class="space-y-8">
+                        <div class="menu-item flex justify-between items-end group" data-aos="fade-up">
+                            <div class="flex-grow">
+                                <h4 class="font-bold text-lg uppercase tracking-tighter">Ekstra Djevičansko Ulje</h4>
+                                <p class="text-xs text-truffle/50 italic">Hladna ekstrakcija, limitirana serija.</p>
+                            </div>
+                            <div class="price-tag font-serif italic text-xl">18,00€</div>
+                        </div>
+                        <div class="menu-item flex justify-between items-end group" data-aos="fade-up">
+                            <div class="flex-grow">
+                                <h4 class="font-bold text-lg uppercase tracking-tighter">Planinski Med</h4>
+                                <p class="text-xs text-truffle/50 italic">Čista esencija divljeg cvijeća.</p>
+                            </div>
+                            <div class="price-tag font-serif italic text-xl">12,50€</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galerija" class="py-32 bg-truffle text-cream px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20 flex flex-col md:flex-row justify-between items-end gap-6">
+                <div data-aos="fade-right">
+                    <span class="text-gold font-bold tracking-[0.5em] text-[10px] uppercase mb-4 block">Vizualni dnevnik</span>
+                    <h2 class="text-4xl md:text-5xl italic">Fragmenti <br>s imanja.</h2>
+                </div>
+                <p class="text-cream/40 max-w-xs text-xs italic pb-2" data-aos="fade-left">
+                    Svaki dan donosi novo svjetlo na naše plodove. Ovo je uvid u naš svakodnevni rad.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-12 md:col-span-8 gallery-item h-[400px]" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?q=80&w=1200" class="w-full h-full object-cover" alt="Povrće">
+                </div>
+                <div class="col-span-12 md:col-span-4 gallery-item h-[400px]" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=800" class="w-full h-full object-cover" alt="Tržnica">
+                </div>
+                <div class="col-span-12 md:col-span-4 gallery-item h-[500px]" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=800" class="w-full h-full object-cover" alt="Ulje">
+                </div>
+                <div class="col-span-12 md:col-span-8 gallery-item h-[500px]" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?q=80&w=1200" class="w-full h-full object-cover" alt="Ruke na zemlji">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="map-frame h-[400px] w-full" data-aos="fade-right">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.7214631372555!2d15.9754!3d45.776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d692c902cc39%3A0x3ae25aa7e4153010!2sZagreb!5e0!3m2!1shr!2shr!4v1700000000000!5m2!1shr!2shr47" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-4xl italic mb-8">Pronađite nas u <br><span class="text-gold">srcu prirode.</span></h2>
+                    <div class="space-y-6 text-sm">
+                        <p class="font-bold border-b border-truffle/10 pb-4">Zeleni Brijeg 12, 10000 Zagreb</p>
+                        <p class="text-truffle/60 italic">Posjete su moguće svakim radnim danom uz prethodnu najavu. Dođite i osjetite miris svježe ubranih plodova.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt" class="py-32 text-center bg-cream px-6 border-t border-truffle/5">
+        <div data-aos="zoom-in">
+            <a href="tel:091234567" class="text-4xl md:text-7xl italic hover:text-gold transition duration-700 block mb-10">091 123 4567</a>
+            <p class="text-[9px] font-black uppercase tracking-[0.4em] opacity-40">Nazovite za narudžbe ili WhatsApp poruku</p>
+        </div>
+        <div class="mt-32 text-[8px] font-bold uppercase tracking-[0.5em] opacity-20">
+            © 2026 OPG ARHIVA | TRADICIJA I KVALITETA
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        const lenis = new Lenis();
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        AOS.init({ duration: 1200, once: true });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-cream/90', 'backdrop-blur-md', 'py-4');
+            } else {
+                nav.classList.remove('bg-cream/90', 'backdrop-blur-md', 'py-4');
+            }
+        });
+    </script>
+</body>
+</html>
