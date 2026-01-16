@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | Ekskluzivna Njega Kože</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        beautyCream: '#fcf9f5',
+                        beautyDeep: '#2c2724',
+                        beautyGold: '#c2a383',
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body { background: #fcf9f5; color: #2c2724; overflow-x: hidden; }
+        
+        /* Parallax efekt za slike */
+        .image-container { overflow: hidden; position: relative; }
+        .image-container img { transition: transform 0.8s cubic-bezier(0, 0, 0.2, 1); }
+        .image-container:hover img { transform: scale(1.05); }
+
+        /* Floating tekst koji se preklapa */
+        .overlap-text { margin-top: -50px; position: relative; z-index: 10; }
+
+        .line-draw {
+            height: 1px;
+            background: #c2a383;
+            width: 0;
+            transition: width 1.5s ease;
+        }
+        .aos-animate .line-draw { width: 100px; }
+    </style>
+</head>
+<body class="antialiased font-sans">
+
+    <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-8 mix-blend-difference text-white">
+        <div class="font-serif text-3xl italic tracking-tighter">Aura.</div>
+        <div class="flex gap-8 text-[10px] uppercase tracking-[0.3em] font-medium items-center">
+            <a href="#tretmani" class="hover:opacity-50 transition">Tretmani</a>
+            <a href="#kontakt" class="bg-white text-black px-6 py-2 rounded-full hover:bg-beautyGold hover:text-white transition">Kontakt</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="min-h-screen pt-32 pb-20 px-6 md:px-20 grid md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-5 order-2 md:order-1" data-aos="fade-right">
+                <div class="line-draw mb-8"></div>
+                <h1 class="font-serif text-6xl md:text-8xl leading-[0.9] mb-8 italic">
+                    Ljepota koja <br> izvire <br> <span class="text-beautyGold">iznutra.</span>
+                </h1>
+                <p class="text-neutral-500 font-light leading-relaxed max-w-sm mb-10">
+                    Naša misija je pružiti holistički pristup njezi lica. Koristimo organske sastojke i najnoviju tehnologiju za postizanje prirodnog sjaja.
+                </p>
+                <a href="#tretmani" class="text-xs uppercase tracking-[0.4em] border-b border-beautyGold pb-2">Istražite usluge</a>
+            </div>
+            <div class="md:col-span-7 order-1 md:order-2 relative" data-aos="fade-left">
+                <div class="image-container rounded-t-[15rem] rounded-b-lg shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1200" class="w-full h-[70vh] object-cover" alt="Njega lica">
+                </div>
+                <div class="absolute -bottom-10 -left-10 hidden md:block bg-beautyDeep p-10 text-white max-w-xs" data-aos="fade-up" data-aos-delay="400">
+                    <p class="font-serif italic text-2xl mb-4">"Koža je ogledalo Vašeg zdravlja."</p>
+                    <p class="text-[9px] uppercase tracking-widest text-beautyGold">Ana Jurić, osnivačica</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tretmani" class="py-40 px-6 md:px-20 bg-white">
+            <div class="text-center mb-32">
+                <span class="text-beautyGold uppercase tracking-[0.5em] text-[10px] mb-4 block">Signature Rituals</span>
+                <h2 class="font-serif text-5xl md:text-7xl italic">Naši Tretmani</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-24">
+                <div class="group" data-aos="fade-up">
+                    <div class="image-container rounded-lg mb-8 h-[500px]">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1000" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Face treatment">
+                    </div>
+                    <div class="flex justify-between items-baseline border-b border-neutral-100 pb-4">
+                        <h3 class="font-serif text-3xl italic">The Glass Skin Ritual</h3>
+                        <span class="text-beautyGold font-medium">75€</span>
+                    </div>
+                    <p class="mt-4 text-neutral-500 font-light text-sm italic">Intenzivna hidratacija s hijaluronskom kiselinom za trenutačni efekt sjaja.</p>
+                </div>
+
+                <div class="group mt-20 md:mt-40" data-aos="fade-up" data-aos-delay="200">
+                    <div class="image-container rounded-lg mb-8 h-[500px]">
+                        <img src="https://images.unsplash.com/photo-1570172234560-9da04790176b?q=80&w=1000" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700" alt="Lifting">
+                    </div>
+                    <div class="flex justify-between items-baseline border-b border-neutral-100 pb-4">
+                        <h3 class="font-serif text-3xl italic">Sculpt & Lift</h3>
+                        <span class="text-beautyGold font-medium">90€</span>
+                    </div>
+                    <p class="mt-4 text-neutral-500 font-light text-sm italic">Ručna limfna drenaža i mikrostruja za prirodni lifting lica.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 flex justify-center text-center bg-beautyCream">
+            <div class="max-w-3xl px-6" data-aos="zoom-in">
+                <p class="font-serif text-3xl md:text-5xl leading-tight italic">
+                    "Vjerujemo da svaki tretman mora biti <span class="text-beautyGold underline underline-offset-8">iskustvo</span>, a ne samo usluga."
+                </p>
+            </div>
+        </section>
+
+        <section id="kontakt" class="py-40 px-6 md:px-20 grid md:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <h2 class="font-serif text-6xl mb-12 italic">Posjetite nas.</h2>
+                <div class="space-y-10">
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-beautyGold mb-2">Adresa</p>
+                        <p class="font-serif text-2xl">Trg Kralja Tomislava 5, Zagreb</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-beautyGold mb-2">Kontakt</p>
+                        <p class="font-serif text-2xl">info@aura-beauty.hr</p>
+                        <p class="font-serif text-2xl">01 234 5678</p>
+                    </div>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-[10px] uppercase tracking-widest border border-beautyDeep px-6 py-2 hover:bg-beautyDeep hover:text-white transition">Instagram</a>
+                        <a href="#" class="text-[10px] uppercase tracking-widest border border-beautyDeep px-6 py-2 hover:bg-beautyDeep hover:text-white transition">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div class="aspect-square bg-[#e8e2db] rounded-full overflow-hidden shadow-inner">
+                    <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=800" class="w-full h-full object-cover mix-blend-multiply opacity-50" alt="Salon">
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="bg-white/80 backdrop-blur-md p-8 rounded-full text-center shadow-xl">
+                        <p class="text-[10px] uppercase tracking-[0.3em]">Rezervirajte</p>
+                        <p class="font-serif italic text-xl">Dostupni termini</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 border-t border-neutral-200 text-center text-[9px] uppercase tracking-[0.4em] text-neutral-400">
+        &copy; 2024 Aura Beauty Atelier. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        AOS.init({ duration: 1200, once: false });
+    </script>
+</body>
+</html>

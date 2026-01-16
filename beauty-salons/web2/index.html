@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMA | Masaža & Bodywork</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandSilk: '#fcfaf7',
+                        brandDeep: '#1a2e2a', // Duboka šumska zelena
+                        brandGold: '#c2a383',
+                    },
+                    fontFamily: {
+                        serif: ['Fraunces', 'serif'],
+                        sans: ['DM Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body { background: #fcfaf7; color: #1a2e2a; }
+        .bento-card { transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); overflow: hidden; position: relative; }
+        .bento-card:hover { transform: translateY(-5px); }
+        .glass-nav { backdrop-filter: blur(10px); background: rgba(252, 250, 247, 0.8); }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #fcfaf7; }
+        ::-webkit-scrollbar-thumb { background: #c2a383; border-radius: 10px; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-brandGold/10 px-6 py-4 flex justify-between items-center">
+        <div class="font-serif italic text-xl font-bold tracking-tighter">SOMA.</div>
+        <div class="hidden md:flex gap-8 text-[11px] uppercase tracking-[0.2em] font-medium">
+            <a href="#usluge" class="hover:text-brandGold transition">Usluge</a>
+            <a href="#o-nama" class="hover:text-brandGold transition">O nama</a>
+            <a href="#kontakt" class="hover:text-brandGold transition">Kontakt</a>
+        </div>
+        <a href="tel:091" class="bg-brandDeep text-brandSilk px-6 py-2 rounded-full text-[10px] uppercase tracking-widest hover:bg-brandGold transition">Rezerviraj</a>
+    </nav>
+
+    <main class="pt-24 pb-12 px-4 md:px-12 max-w-7xl mx-auto">
+        
+        <header class="py-20 text-center" data-aos="fade-down">
+            <span class="text-brandGold uppercase tracking-[0.5em] text-[10px] mb-4 block">Holistički pristup tijelu</span>
+            <h1 class="font-serif italic text-5xl md:text-8xl leading-tight mb-8">Usporite. Udahnite. <br> <span class="text-brandGold">Zacijelite.</span></h1>
+            <p class="max-w-xl mx-auto text-neutral-500 font-light leading-relaxed">
+                U srcu grada stvorili smo prostor gdje vrijeme staje. Soma je studio posvećen dubinskoj masaži i obnovi energije.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[800px]">
+            
+            <div class="md:col-span-2 md:row-span-2 bento-card rounded-[2rem]" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200" class="w-full h-full object-cover" alt="Masaža">
+                <div class="absolute inset-0 bg-gradient-to-t from-brandDeep/60 to-transparent flex items-end p-10">
+                    <p class="text-brandSilk font-serif italic text-3xl">Terapeutska dubina.</p>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 bg-brandDeep rounded-[2rem] p-10 text-brandSilk flex flex-col justify-between bento-card" data-aos="fade-left">
+                <div>
+                    <h3 class="font-serif text-3xl mb-4 italic">Deep Tissue</h3>
+                    <p class="text-brandSilk/60 font-light">Oslobađanje od kronične napetosti mišića uz fokus na duboke slojeve tkiva.</p>
+                </div>
+                <div class="flex justify-between items-center mt-8">
+                    <span class="text-2xl font-serif">55€</span>
+                    <span class="text-[10px] uppercase tracking-widest border border-brandSilk/30 px-4 py-2 rounded-full">60 min</span>
+                </div>
+            </div>
+
+            <div class="md:col-span-1 bg-[#e8e2db] rounded-[2rem] bento-card" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=600" class="w-full h-full object-cover opacity-80 mix-blend-multiply" alt="Ulja">
+            </div>
+
+            <div class="md:col-span-1 bg-brandGold rounded-[2rem] p-8 text-brandDeep flex flex-col justify-center text-center bento-card" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="font-serif text-2xl mb-2 italic">Aroma Zen</h3>
+                <p class="text-[11px] uppercase tracking-[0.2em] mb-4">Eterična ulja</p>
+                <span class="text-3xl font-serif">45€</span>
+            </div>
+
+        </div>
+
+        <section class="py-32 grid md:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <h2 class="font-serif text-4xl mb-6 italic">Zašto odabrati Somu?</h2>
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <span class="text-brandGold font-serif italic text-2xl">01</span>
+                        <p class="text-neutral-500"><strong class="text-brandDeep">Individualan pristup.</strong> Svaki tretman prilagođavamo vašim trenutnim potrebama i bolnim točkama.</p>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-brandGold font-serif italic text-2xl">02</span>
+                        <p class="text-neutral-500"><strong class="text-brandDeep">Certificirani terapeuti.</strong> Naš tim čine stručnjaci s dugogodišnjim iskustvom u medicinskoj i sportskoj masaži.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=800" class="rounded-[3rem] shadow-2xl rotate-2 hover:rotate-0 transition duration-700" alt="Ambijent">
+            </div>
+        </section>
+
+        <section id="kontakt" class="bg-white border border-brandGold/20 rounded-[4rem] p-12 md:p-20 text-center shadow-sm">
+            <h2 class="font-serif text-5xl mb-10 italic">Pronađite svoj mir.</h2>
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-brandGold mb-2">Lokacija</p>
+                    <p class="font-serif">Radićeva ulica 14, Zagreb</p>
+                </div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-brandGold mb-2">Telefon</p>
+                    <p class="font-serif text-xl">098 765 4321</p>
+                </div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-brandGold mb-2">Radno vrijeme</p>
+                    <p class="font-serif">Pon - Pet: 09:00 - 21:00</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-10 text-center text-[10px] uppercase tracking-[0.3em] text-neutral-400">
+        &copy; 2024 Soma Studio. Sva prava pridržana.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>

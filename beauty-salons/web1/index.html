@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEAUTY ATELIER | Vaša koža, naša strast</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        studioBase: '#fff9f8', // Meka nude/ružičasta podloga
+                        studioAccent: '#4a3f3f', // Elegantna tamna kava
+                        studioGold: '#d4a373', // Brončani sjaj
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:italic,wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        html.lenis { height: auto; }
+        .lenis-smooth { scroll-behavior: auto !important; }
+        body { background: #fff9f8; color: #4a3f3f; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        .sticky-side { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+        
+        .bg-image-container {
+            position: absolute;
+            inset: 0;
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+        }
+        .bg-image-container.active { opacity: 1; }
+
+        .image-frame { 
+            border-radius: 400px 400px 0 0; 
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .floating-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 8vw;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(212, 163, 115, 0.2);
+            position: absolute;
+            z-index: -1;
+            white-space: nowrap;
+        }
+
+        .map-wrapper iframe {
+            filter: grayscale(0.1) sepia(0.1);
+            border-radius: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-50 p-8 flex justify-between items-center mix-blend-difference">
+        <div class="font-serif italic text-2xl font-bold tracking-widest uppercase text-studioGold">BEAUTY.</div>
+        <a href="#kontakt" class="border border-studioGold text-studioGold px-8 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-studioGold hover:text-white transition-all duration-500">Naruči se</a>
+    </nav>
+
+    <div class="flex flex-col lg:flex-row">
+        
+        <div class="hidden lg:block lg:w-1/2 sticky-side bg-[#f3ece9]">
+            
+            <div id="img-hero" class="bg-image-container active flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1570172234560-9da04790176b?q=80&w=1000" class="image-frame" alt="Lice njega">
+                <div class="absolute bottom-24 left-24">
+                    <p class="font-serif italic text-7xl text-white mix-blend-overlay opacity-80">Glow.</p>
+                </div>
+            </div>
+
+            <div id="img-services" class="bg-image-container flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1000" class="image-frame" alt="Kozmetika">
+                <div class="absolute bottom-24 left-24">
+                    <p class="font-serif italic text-7xl text-white mix-blend-overlay opacity-80">Ritual.</p>
+                </div>
+            </div>
+
+            <div id="img-location" class="bg-image-container flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1000" class="image-frame" alt="Salon">
+                <div class="absolute bottom-24 left-24">
+                    <p class="font-serif italic text-7xl text-white mix-blend-overlay opacity-80">Atelier.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lg:w-1/2 px-8 md:px-20">
+            
+            <section id="section-hero" class="min-h-screen flex flex-col justify-center py-32 relative">
+                <span class="floating-text top-20 left-0">BEAUTY</span>
+                <span class="text-studioGold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block" data-aos="fade-up">ZAGREB CENTER</span>
+                <h1 class="font-serif text-6xl md:text-8xl mb-10 leading-tight" data-aos="fade-up">Otkrijte sjaj <br> <span class="italic text-studioGold">svoje kože.</span></h1>
+                <p class="text-neutral-500 leading-relaxed text-lg mb-10">
+                    Specijalizirani smo za napredne tretmane lica i tijela koji naglašavaju vašu prirodnu ljepotu. U Beauty Atelieru spajamo luksuznu kozmetiku i najmoderniju tehnologiju.
+                </p>
+                <div class="w-20 h-[1px] bg-studioGold"></div>
+            </section>
+
+            <section id="section-services" class="min-h-screen flex flex-col justify-center py-32 relative">
+                <span class="floating-text -top-10 right-0 opacity-40">TRETMANI</span>
+                <h2 class="font-serif text-4xl mb-16 italic">Ekskluzivne Usluge</h2>
+                
+                <div class="space-y-12">
+                    <div class="flex justify-between items-end border-b border-studioGold/20 pb-4 group cursor-pointer" data-aos="fade-up">
+                        <div>
+                            <h3 class="font-serif text-2xl group-hover:text-studioGold transition">Luminous Facial</h3>
+                            <p class="text-[10px] uppercase tracking-widest text-neutral-400 mt-2 italic">Dubinska hidratacija i sjaj</p>
+                        </div>
+                        <span class="font-serif italic text-xl">65€</span>
+                    </div>
+
+                    <div class="flex justify-between items-end border-b border-studioGold/20 pb-4 group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                        <div>
+                            <h3 class="font-serif text-2xl group-hover:text-studioGold transition">Lash Lift Premium</h3>
+                            <p class="text-[10px] uppercase tracking-widest text-neutral-400 mt-2 italic">Savršeno uvijene prirodne trepavice</p>
+                        </div>
+                        <span class="font-serif italic text-xl">45€</span>
+                    </div>
+
+                    <div class="flex justify-between items-end border-b border-studioGold/20 pb-4 group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                        <div>
+                            <h3 class="font-serif text-2xl group-hover:text-studioGold transition">Bio-Peel Expert</h3>
+                            <p class="text-[10px] uppercase tracking-widest text-neutral-400 mt-2 italic">Obnova teksture i uklanjanje mrlja</p>
+                        </div>
+                        <span class="font-serif italic text-xl">80€</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-location" class="min-h-screen flex flex-col justify-center py-32">
+                <h2 class="font-serif text-4xl mb-8 italic">Pronađite nas.</h2>
+                <p class="text-neutral-500 mb-10 italic uppercase text-[10px] tracking-widest">Ilica 120, 10000 Zagreb</p>
+                
+                <div class="w-full h-[400px] map-wrapper shadow-xl" data-aos="zoom-in">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.7890453535496!2d15.96105317669476!3d45.815528371081974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6fe69ed281f%3A0x726c954593976378!2sIlica%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1715600000000!5m2!1shr!2shr"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </section>
+
+            <section id="kontakt" class="min-h-screen flex flex-col justify-center text-center pb-20">
+                <div class="bg-studioAccent text-white p-12 md:p-20 rounded-[4rem] relative overflow-hidden shadow-2xl">
+                    <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-10"></div>
+                    <h2 class="font-serif text-5xl mb-8 italic">Naručite se.</h2>
+                    <a href="tel:0911234567" class="text-3xl md:text-5xl font-light hover:text-studioGold transition duration-500 tracking-tighter italic block mb-12">091 987 6543</a>
+                    <div class="pt-10 border-t border-white/10 flex justify-center gap-10 opacity-60 text-[10px] font-bold tracking-[0.2em] uppercase">
+                        <a href="#" class="hover:text-studioGold transition">Instagram</a>
+                        <a href="#" class="hover:text-studioGold transition">Facebook</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        AOS.init({ duration: 1500, once: false });
+
+        const sections = [
+            { id: 'section-hero', imgId: 'img-hero' },
+            { id: 'section-services', imgId: 'img-services' },
+            { id: 'section-location', imgId: 'img-location' }
+        ];
+
+        window.addEventListener('scroll', () => {
+            let currentSection = "";
+            sections.forEach(section => {
+                const element = document.getElementById(section.id);
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                    currentSection = section.imgId;
+                }
+            });
+            if (currentSection) {
+                document.querySelectorAll('.bg-image-container').forEach(img => {
+                    img.classList.remove('active');
+                });
+                document.getElementById(currentSection).classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
