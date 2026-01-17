@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAISON DE LUXE | Masaža & Spa</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepTaupe: '#2d2926',
+                        silkBeige: '#e9e4df',
+                        luxuryGold: '#9c845c',
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Montserrat:wght@100;300;600;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { background-color: #e9e4df; color: #2d2926; overflow-x: hidden; }
+        
+        /* Floating WhatsApp */
+        .wa-sticky {
+            position: fixed; bottom: 30px; right: 30px; z-index: 100;
+            background: #25d366; padding: 18px; border-radius: 100%;
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.3);
+            transition: all 0.4s ease;
+        }
+        .wa-sticky:hover { transform: scale(1.1); }
+
+        .text-outline { -webkit-text-stroke: 1px #2d2926; color: transparent; }
+
+        /* Gumb rezerviraj: na mobitelu uvijek vidljiv, na desktopu na hover */
+        .reserve-btn {
+            opacity: 1;
+            transform: none;
+            transition: all 0.4s ease;
+        }
+
+        @media (min-width: 768px) {
+            .reserve-btn { opacity: 0; transform: translateX(20px); }
+            .group:hover .reserve-btn { opacity: 1; transform: translateX(0); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <a href="https://wa.me/38598728928?text=Pozdrav!%20Zanima%20me%20termin%20za%20masažu." target="_blank" class="wa-sticky">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.17-.478 1.338-.942.164-.464.164-.86.114-.942-.049-.082-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+    <nav class="fixed top-0 w-full z-[90] px-6 py-6 flex justify-between items-center bg-silkBeige/90 backdrop-blur-md border-b border-black/5">
+        <div class="font-serif text-2xl font-semibold italic">Maison de Luxe</div>
+        <div class="hidden md:flex gap-12 text-[10px] uppercase tracking-[0.4em] font-bold">
+            <a href="#rituali" class="hover:text-luxuryGold transition">Rituali</a>
+            <a href="#o-nama" class="hover:text-luxuryGold transition">Filozofija</a>
+            <a href="#kontakt" class="hover:text-luxuryGold transition">Kontakt</a>
+        </div>
+        <a href="tel:098728928" class="bg-deepTaupe text-white px-6 py-3 rounded-full text-[10px] uppercase tracking-widest font-black">Pozovi odmah</a>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 scale-110" data-aos="zoom-out" data-aos-duration="3000">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2000" class="w-full h-full object-cover brightness-50" alt="Hero">
+        </div>
+        <div class="relative z-10 text-center px-6">
+            <h1 class="text-white font-serif text-[18vw] md:text-[10vw] leading-none italic" data-aos="fade-up">Serenity.</h1>
+            <p class="text-white/80 text-[10px] md:text-xs uppercase tracking-[0.6em] font-bold mt-8 shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                Premium Wellness Iskustvo u Zagrebu
+            </p>
+        </div>
+    </section>
+
+    <div class="bg-deepTaupe text-silkBeige py-16 px-8 relative z-20">
+        <div class="container mx-auto grid md:grid-cols-3 gap-12 text-center">
+            <div data-aos="fade-up">
+                <p class="text-[10px] text-luxuryGold uppercase tracking-widest mb-3 font-bold">Lokacija</p>
+                <p class="font-serif text-2xl italic">Ulica Kralja Zvonimira 15</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="border-y md:border-y-0 md:border-x border-white/10 py-8 md:py-0">
+                <p class="text-[10px] text-luxuryGold uppercase tracking-widest mb-3 font-bold">Radno Vrijeme</p>
+                <p class="font-serif text-2xl italic">Svaki dan: 09:00 — 21:00h</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400">
+                <p class="text-[10px] text-luxuryGold uppercase tracking-widest mb-3 font-bold">Kontakt Telefon</p>
+                <p class="font-serif text-2xl italic underline">098 728 928</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="o-nama" class="py-32 px-6 container mx-auto grid md:grid-cols-2 gap-20 items-center">
+        <div class="relative" data-aos="fade-right">
+            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1000" class="rounded-t-[10rem] rounded-b-xl shadow-2xl h-[600px] w-full object-cover" alt="Salon Interior">
+            <div class="absolute -bottom-6 -right-6 bg-luxuryGold p-10 rounded-full shadow-2xl hidden md:block">
+                <p class="text-[10px] font-black uppercase tracking-widest text-white italic">Premium<br>Kvaliteta</p>
+            </div>
+        </div>
+        <div data-aos="fade-left">
+            <h2 class="text-outline text-7xl md:text-9xl font-serif italic mb-6 leading-none">Art of</h2>
+            <h3 class="text-3xl md:text-4xl font-serif italic mb-8">Touch & Soul.</h3>
+            <p class="text-gray-600 font-light leading-relaxed mb-10 italic text-lg">
+                U našem studiju vjerujemo da masaža nije luksuz, već nužnost za moderno doba. Maison de Luxe nudi mirno utočište od gradske vreve gdje svaki pokret ruku vraća vitalnost vašem tijelu.
+            </p>
+            <div class="h-[1px] w-32 bg-luxuryGold mb-8"></div>
+            <p class="text-[10px] uppercase tracking-widest font-black">Iskusni tim terapeuta</p>
+        </div>
+    </section>
+
+    <section id="rituali" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-4">
+                <h2 class="font-serif text-7xl md:text-9xl italic">Menu</h2>
+                <p class="text-[11px] uppercase tracking-[0.5em] font-black text-luxuryGold italic">Sve cijene uključuju PDV</p>
+            </div>
+
+            <div class="divide-y divide-gray-100">
+                <div class="group py-12 flex flex-col md:flex-row justify-between items-start md:items-center hover:bg-silkBeige/40 transition-all px-4" data-aos="fade-up">
+                    <div class="flex items-center gap-8">
+                        <span class="text-luxuryGold font-serif italic text-3xl opacity-50">01</span>
+                        <div>
+                            <h4 class="text-2xl md:text-3xl font-serif italic font-semibold">Deep Tissue Masaža</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-gray-400 mt-2 font-bold italic">Intenzivni pritisak • 60 min</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between w-full md:w-auto gap-12 mt-8 md:mt-0">
+                        <span class="font-serif text-3xl italic font-bold">50€</span>
+                        <a href="https://wa.me/38598728928?text=Pozdrav!%20Želim%20rezervirati%20Deep%20Tissue%20masažu." 
+                           class="reserve-btn bg-deepTaupe text-white text-[10px] px-10 py-4 rounded-full font-black uppercase tracking-widest">
+                            Rezerviraj
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group py-12 flex flex-col md:flex-row justify-between items-start md:items-center hover:bg-silkBeige/40 transition-all px-4" data-aos="fade-up">
+                    <div class="flex items-center gap-8">
+                        <span class="text-luxuryGold font-serif italic text-3xl opacity-50">02</span>
+                        <div>
+                            <h4 class="text-2xl md:text-3xl font-serif italic font-semibold">Maison Signature</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-gray-400 mt-2 font-bold italic">Relaksacija i eterična ulja • 90 min</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between w-full md:w-auto gap-12 mt-8 md:mt-0">
+                        <span class="font-serif text-3xl italic font-bold">70€</span>
+                        <a href="https://wa.me/38598728928?text=Pozdrav!%20Želim%20rezervirati%20Maison%20Signature%20masažu." 
+                           class="reserve-btn bg-deepTaupe text-white text-[10px] px-10 py-4 rounded-full font-black uppercase tracking-widest">
+                            Rezerviraj
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group py-12 flex flex-col md:flex-row justify-between items-start md:items-center hover:bg-silkBeige/40 transition-all px-4" data-aos="fade-up">
+                    <div class="flex items-center gap-8">
+                        <span class="text-luxuryGold font-serif italic text-3xl opacity-50">03</span>
+                        <div>
+                            <h4 class="text-2xl md:text-3xl font-serif italic font-semibold">Hot Stone Ritual</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-gray-400 mt-2 font-bold italic">Vulkansko kamenje • 75 min</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between w-full md:w-auto gap-12 mt-8 md:mt-0">
+                        <span class="font-serif text-3xl italic font-bold">65€</span>
+                        <a href="https://wa.me/38598728928?text=Pozdrav!%20Želim%20rezervirati%20Hot%20Stone%20masažu." 
+                           class="reserve-btn bg-deepTaupe text-white text-[10px] px-10 py-4 rounded-full font-black uppercase tracking-widest">
+                            Rezerviraj
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="py-32 px-6 bg-silkBeige">
+        <div class="container mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <h2 class="font-serif text-6xl md:text-7xl italic mb-12">Kontakt</h2>
+                <div class="space-y-12">
+                    <div>
+                        <p class="text-[10px] font-black uppercase tracking-widest text-luxuryGold mb-4">Adresa Studija</p>
+                        <p class="text-3xl font-serif italic">Zvonimirova 15, Zagreb</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black uppercase tracking-widest text-luxuryGold mb-4">Brzi Kontakt</p>
+                        <p class="text-2xl font-serif italic underline">098 728 928</p>
+                        <p class="text-2xl font-serif italic mt-2">info@maison-luxe.hr</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="h-[550px] rounded-t-[10rem] rounded-b-3xl overflow-hidden shadow-2xl border-8 border-white" data-aos="zoom-in">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.789049442!2d15.9774!3d45.8153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6a3f6a3f6a3%3A0x1a1a1a1a1a1a1a1a!2zVHJnIGJhbmEgSm9zaXBhIEplbGE0acSHYSwgMTAwMDAsIFphZ3JlYg!5e0!3m2!1shr!2shr!4v1710000000000!5m2!1shr!2shr" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 bg-deepTaupe text-center text-white/20">
+        <div class="font-serif text-4xl italic text-white/40 mb-10 tracking-widest">Maison de Luxe</div>
+        <p class="text-[9px] uppercase tracking-[0.6em] font-bold">© 2024 Premium Massage Experience. Zagreb, Croatia.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>

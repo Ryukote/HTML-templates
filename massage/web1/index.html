@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'OASIS | Masaža i Wellness</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        spaGold: '#c5a47e',
+                        spaDark: '#121212',
+                        spaLight: '#f9f7f2',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { background-color: #f9f7f2; color: #121212; overflow-x: hidden; }
+        
+        /* WHATSAPP STICKY */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+
+        .whatsapp-tooltip {
+            position: fixed;
+            bottom: 45px;
+            right: 105px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 900;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 99;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        .whatsapp-float:hover + .whatsapp-tooltip { opacity: 1; transform: translateX(0); }
+
+        /* KARTICE */
+        .service-card {
+            background: white;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="antialiased font-sans">
+
+    <a href="https://wa.me/38598728928" target="_blank" class="whatsapp-float">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.17-.478 1.338-.942.164-.464.164-.86.114-.942-.049-.082-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+    <div class="whatsapp-tooltip">Rezerviraj termin</div>
+
+    <nav class="absolute top-0 w-full z-50 flex justify-between items-center px-6 md:px-16 py-10">
+        <div class="font-serif text-3xl tracking-widest uppercase font-bold text-white md:text-spaDark">L'Oasis</div>
+        <div class="hidden md:flex gap-10 text-[11px] uppercase tracking-[0.4em] font-bold">
+            <a href="#tretmani" class="hover:text-spaGold transition">Tretmani</a>
+            <a href="#lokacija" class="hover:text-spaGold transition">Lokacija</a>
+            <a href="tel:098728928" class="bg-spaGold text-spaDark px-4 py-2 rounded-full">098 728 928</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="min-h-screen flex items-center justify-center text-center px-6 relative overflow-hidden bg-spaDark">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2000" class="w-full h-full object-cover opacity-50" alt="Salon Ambience">
+            </div>
+            <div class="relative z-10 max-w-5xl" data-aos="fade-up">
+                <h1 class="font-serif text-white text-6xl md:text-[9rem] leading-none mb-8 italic">Oaza <br> mira.</h1>
+                <p class="font-sans text-sm md:text-base uppercase tracking-[0.6em] text-spaGold mb-12 font-bold">Premium iskustvo masaže u centru Zagreba</p>
+                <a href="#tretmani" class="inline-block bg-spaGold text-spaDark px-16 py-6 rounded-full text-sm font-black uppercase tracking-widest hover:bg-white transition duration-500 shadow-2xl">Započnite putovanje</a>
+            </div>
+        </section>
+
+        <section id="tretmani" class="py-32 px-6 container mx-auto">
+            <div class="text-center mb-24" data-aos="fade-up">
+                <h2 class="font-serif text-5xl md:text-7xl italic mb-6">Usluge</h2>
+                <div class="w-24 h-1 bg-spaGold mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10 items-stretch">
+                <div class="service-card p-6 rounded-[2.5rem]" data-aos="fade-up">
+                    <div class="aspect-square overflow-hidden rounded-3xl mb-8">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800" class="w-full h-full object-cover" alt="Masaža">
+                    </div>
+                    <div class="flex-grow flex flex-col">
+                        <h3 class="font-serif text-3xl italic mb-4">Relaksacijska</h3>
+                        <p class="text-gray-500 text-sm mb-10 leading-relaxed italic">Duboko opuštanje cijelog tijela uz korištenje prirodnih eteričnih ulja.</p>
+                        <div class="mt-auto flex justify-between items-center border-t border-gray-100 pt-8">
+                            <span class="text-xl font-black text-spaDark">40€ / 60min</span>
+                            <a href="https://wa.me/38598728928" class="text-base uppercase tracking-widest font-black text-spaGold border-b-4 border-spaGold hover:text-spaDark transition-colors">REZERVIRAJ</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card p-6 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="100">
+                    <div class="aspect-square overflow-hidden rounded-3xl mb-8">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=800" class="w-full h-full object-cover" alt="Medicinska">
+                    </div>
+                    <div class="flex-grow flex flex-col">
+                        <h3 class="font-serif text-3xl italic mb-4">Medicinska</h3>
+                        <p class="text-gray-500 text-sm mb-10 leading-relaxed italic">Intenzivna terapija usmjerena na uklanjanje bolova i napetosti u mišićima.</p>
+                        <div class="mt-auto flex justify-between items-center border-t border-gray-100 pt-8">
+                            <span class="text-xl font-black text-spaDark">45€ / 45min</span>
+                            <a href="https://wa.me/38598728928" class="text-base uppercase tracking-widest font-black text-spaGold border-b-4 border-spaGold hover:text-spaDark transition-colors">REZERVIRAJ</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card p-6 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="200">
+                    <div class="aspect-square overflow-hidden rounded-3xl mb-8">
+                        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=800" class="w-full h-full object-cover" alt="Hot Stone">
+                    </div>
+                    <div class="flex-grow flex flex-col">
+                        <h3 class="font-serif text-3xl italic mb-4">Hot Stone</h3>
+                        <p class="text-gray-500 text-sm mb-10 leading-relaxed italic">Ritual toplim vulkanskim kamenjem za savršen balans uma i tijela.</p>
+                        <div class="mt-auto flex justify-between items-center border-t border-gray-100 pt-8">
+                            <span class="text-xl font-black text-spaDark">60€ / 75min</span>
+                            <a href="https://wa.me/38598728928" class="text-base uppercase tracking-widest font-black text-spaGold border-b-4 border-spaGold hover:text-spaDark transition-colors">REZERVIRAJ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lokacija" class="py-32 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="font-serif text-5xl md:text-6xl italic mb-10">Gdje nas <br> možete naći?</h2>
+                    <div class="space-y-8 text-lg">
+                        <div class="flex items-center gap-6 border-b border-gray-100 pb-6">
+                            <span class="bg-spaGold/10 p-4 rounded-full">📍</span>
+                            <p class="font-bold">Zagrebačka avenija 100, 10000 Zagreb</p>
+                        </div>
+                        <div class="flex items-center gap-6 border-b border-gray-100 pb-6">
+                            <span class="bg-spaGold/10 p-4 rounded-full">📞</span>
+                            <p class="font-bold underline">098 728 928</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-spaLight" data-aos="zoom-in">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.789123067851!2d15.9774!3d45.815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6a36c568d47%3A0x6796c8008064a263!2sTrg%20bana%20Josipa%20Jela%C4%8Di%C4%87a!5e0!3m2!1shr!2shr!4v1700000000000!5m2!1shr!2shr" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-16 bg-spaDark text-white/20 text-center text-[11px] uppercase tracking-[0.6em] italic">
+        © 2024 L'Oasis Massage Studio Zagreb. Sva prava pridržana.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>
